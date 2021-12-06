@@ -1,0 +1,19 @@
+.text_card{
+    border-radius: var(--border-radius);
+}
+
+.text_card.blue{
+    background: var(--color-util-blue);
+}
+
+.text_card.green{
+    background: var(--color-util-green);
+}
+
+.text_card.orange{
+    background: var(--color-util-orange);
+}
+
+.text_card.violet{
+    background: var(--color-util-violet);
+}
