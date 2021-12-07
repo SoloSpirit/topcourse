@@ -2,3 +2,45 @@
     --border-radius: 8px;
     --border-radius-s: 4px;
 }
+
+.g_framed{
+    border-radius: var(--border-radius);
+    background: var(--color-gray-d);
+    height: 36px;
+    padding: 0 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.g_btn{
+    cursor: pointer;
+    border-radius: var(--border-radius-s);
+    background: var(--color-blue);
+    height: 46px;
+    padding: 0 24px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.g_btn:hover{
+    background: var(--color-blue-l);
+}
+
+.g_btn-dark{
+    border-radius: var(--border-radius);
+    background: var(--color-gray);
+    height: 32px;
+    padding: 0 8px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.g_btn-dark:hover{
+    background: var(--color-gray-d);
+}
