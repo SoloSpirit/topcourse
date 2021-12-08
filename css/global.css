@@ -22,11 +22,17 @@ a{
     text-decoration: none;
 }
 
+p{
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
 .wrapper{
     max-width: 1200px;
     height: 100%;
     padding: 0 40px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 header{
@@ -114,6 +120,6 @@ header .menu .profile:hover .chevron{
     background: var(--color-gray-l);
 }
 
-main{
+article{
     padding: 40px 0;
 }

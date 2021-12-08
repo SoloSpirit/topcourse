@@ -1,0 +1,92 @@
+.page_main main{
+    max-width: 700px;
+}
+
+.page_main .info_main{
+    border-radius: var(--border-radius);
+    background: var(--color-pink);
+    padding: 24px;
+    color: var(--color-black);
+}
+
+.page_main .info_main .g_title{
+    margin: 16px 0 38px;
+}
+
+.page_main .info_main .g_btn{
+    width: 100%;
+    max-width: 376px;
+}
+
+.page_main .info_telegram{
+    border: 1px solid var(--color-gray-l);
+    border-radius: var(--border-radius);
+    padding: 18px 16px;
+    margin: 14px 0 0;
+    display: block;
+    position: relative;
+}
+
+.page_main .info_telegram:hover{
+    background: var(--color-gray-d);
+}
+
+.page_main .info_telegram .g_title{
+    margin: 0 0 16px;
+}
+
+.page_main .info_telegram p{
+    font-size: 18px;
+    margin: 0;
+}
+
+.page_main .info_telegram img{
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 14px;
+    right: 16px;
+}
+
+.page_main .course_structure{
+    margin: 43px 0 0;
+}
+
+.page_main aside{
+    width: calc(100% - 700px - 40px);
+}
+
+.page_main aside > .g_title{
+    margin-bottom: 20px;
+}
+
+.page_main aside .progress{
+    border-radius: 13px;
+    background: var(--color-gray);
+    height: 16px;
+    margin: 0 12px;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.page_main aside .progress .fill{
+    border-radius: 13px;
+    background: var(--color-blue-l);
+    width: 15%;
+    height: 100%;
+    display: block;
+}
+
+.page_main aside .counters{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.page_main aside .counters > span{
+    margin: 0 16px 0 0;
+}
+
+.page_main aside .counters .value{
+    font-size: 22px;
+    font-weight: 700;
+}
