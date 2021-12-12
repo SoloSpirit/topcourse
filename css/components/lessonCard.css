@@ -1,0 +1,104 @@
+.g_lesson_card{
+    border: 1px solid var(--color-gray-l);
+    border-radius: var(--border-radius);
+    background: var(--color-gray-d);
+    padding: 20px 18px;
+    margin: 0 0 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.g_lesson_card:last-child{
+    margin-bottom: 0;
+}
+
+.g_lesson_card:before{
+    content: '';
+    border: 2px solid var(--color-gray-l2);
+    border-radius: 50%;
+    background: var(--color-bg);
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: -41px;
+}
+
+.g_lesson_card-finished:before,
+.g_lesson_card-in_progress:before{
+    border-color: var(--color-blue-l);
+}
+
+.g_lesson_card-finished:before{
+    background-color: var(--color-blue-l);
+    background-image: url(../../img/icons/icon_check.svg);
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.g_lesson_card .lesson_img{
+    border-radius: var(--border-radius-s);
+    background-color: rgba(40, 107, 234, 0.4);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 82px;
+    height: 82px;
+    margin: 0 24px 0 0;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.g_lesson_card .lesson_info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.g_lesson_card .lesson_info .g_title{
+    width: 100%;
+    margin: 0 0 12px;
+}
+
+.g_lesson_card span img{
+    margin-bottom: 2px;
+    vertical-align: middle;
+}
+
+.g_lesson_card-finished .result{
+    color: var(--color-parts-green);
+}
+
+.g_lesson_card-not_passed .result{
+    color: var(--color-parts-red);
+}
+
+.g_lesson_card a.g_btn{
+    margin: 0 0 0 auto;
+}
+
+/* Adaptive */
+@media only screen and (max-width: 900px) {
+    .g_lesson_card{
+        margin-bottom: 8px;
+    }
+
+    .g_lesson_card-in_progress{
+        border-color: var(--color-blue);
+    }
+
+    .g_lesson_card:before{
+        display: none;
+    }
+
+    .g_lesson_card .lesson_img{
+        display: none;
+    }
+
+    .g_lesson_card a.g_btn{
+        display: none;
+    }
+}

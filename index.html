@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/global.m.css">
     <link rel="stylesheet" href="css/pages/main.css">
+    <link rel="stylesheet" href="css/pages/main.m.css">
     <link rel="stylesheet" href="css/components/common.css">
-    <link rel="stylesheet" href="css/components/courseCard.css">
+    <link rel="stylesheet" href="css/components/modulesList.css">
+    <link rel="stylesheet" href="css/components/lessonCard.css">
     <link rel="stylesheet" href="css/components/textCard.css">
+    <script src="js/common.js"></script>
     <title>Main</title>
 </head>
 <body>
@@ -23,19 +28,19 @@
             
             <ul class="menu">
                 <li class="item">
-                    <img src="img/header/icon_projects.svg" alt="projects">
+                    <img src="img/header/icon_projects.svg" alt="icon_projects">
                 </li>
                 <li class="item">
-                    <img src="img/header/icon_updates.svg" alt="updates">
+                    <img src="img/header/icon_updates.svg" alt="icon_updates">
                 </li>
                 <li class="item">
-                    <img src="img/header/icon_tickets.svg" alt="tickets">
+                    <img src="img/header/icon_tickets.svg" alt="icon_tickets">
                 </li>
                 <li class="item">
-                    <img src="img/header/icon_support.svg" alt="support">
+                    <img src="img/header/icon_support.svg" alt="icon_support">
                 </li>
                 <li class="item">
-                    <img src="img/header/icon_informer.svg" alt="informer">
+                    <img src="img/header/icon_informer.svg" alt="icon_informer">
                 </li>
                 <li class="profile">
                     <img src="img/header/avatar.svg" alt="avatar">
@@ -46,7 +51,7 @@
     </header>
 
     <article class="page_main">
-        <div class="wrapper g_flex g_flex-h-between">
+        <div class="wrapper">
             <main>
                 <section class="course_info">
                     <div class="info_main">
@@ -66,6 +71,93 @@
 
                 <section class="course_structure">
                     <h2 class="g_title">Структура курса</h2>
+
+                    <div class="g_modules_list">
+                        <div data-module="1">
+                            <h5 class="g_title module_name">Модуль 1. Как устроен интернет.</h5>
+
+                            <ul class="g_list-unstyled">
+                                <li class="g_lesson_card g_lesson_card-finished">
+                                    <div class="lesson_img"></div>
+                                    <div class="lesson_info">
+                                        <h4 class="g_title">Профессия SEO-специалист</h4>
+                                        <span>
+                                            <img src="img/icons/icon_time.svg" alt="icon_time">
+                                            14 мин.
+                                        </span>
+                                        <span>
+                                            Результат теста:
+                                            <span class="result">
+                                                <img src="img/icons/icon_thumb-up.svg" alt="icon_thumb">
+                                                5/5
+                                            </span>
+                                        </span>
+                                    </div>
+                                </li>
+
+                                <li class="g_lesson_card g_lesson_card-finished g_lesson_card-not_passed">
+                                    <div class="lesson_img"></div>
+                                    <div class="lesson_info">
+                                        <h4 class="g_title">Инструменты SEO-специалиста</h4>
+                                        <span>
+                                            <img src="img/icons/icon_time.svg" alt="icon_time">
+                                            {1} мин.
+                                        </span>
+                                        <span>
+                                            Результат теста:
+                                            <span class="result">
+                                                <img src="img/icons/icon_heart-broken.svg" alt="icon_heart">
+                                                2/5
+                                            </span>
+                                        </span>
+                                    </div>
+                                </li>
+
+                                <li class="g_lesson_card g_lesson_card-in_progress">
+                                    <div class="lesson_img"></div>
+                                    <div class="lesson_info">
+                                        <h4 class="g_title">Медиапланирование</h4>
+                                        <span>
+                                            <img src="img/icons/icon_time.svg" alt="icon_time">
+                                            {1} мин.
+                                        </span>
+                                    </div>
+                                    <a href="#to_course_continue" class="g_btn">Продолжить</a>
+                                </li>
+
+                                <li class="g_lesson_card">
+                                    <div class="lesson_img"></div>
+                                    <div class="lesson_info">
+                                        <h4 class="g_title">Тест по модулю</h4>
+                                        <span>
+                                            <img src="img/icons/icon_time.svg" alt="icon_time">
+                                            {1} мин.
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div data-module="2" class="closed">
+                            <h5 class="g_title module_name">
+                                Модуль 2. Подготовка сайта к продвижению
+                                <span class="open_date">
+                                    Май ‘22
+                                    <img src="img/icons/icon_lock.svg" alt="icon_lock">
+                                </span>
+                            </h5>
+                        </div>
+
+                        <div data-module="2" class="closed">
+                            <h5 class="g_title module_name">
+                                Модуль 3. Название модуля
+                                <span class="open_date">
+                                    Май ‘22
+                                    <img src="img/icons/icon_lock.svg" alt="icon_lock">
+                                </span>
+                            </h5>
+                        </div>
+                    </div>
                 </section>
             </main>
 
@@ -74,11 +166,11 @@
                 <span class="g_title">Старт в профессию</span>
 
                 <div class="g_flex g_flex-v-center">
-                    <img src="img/emoji/emoji_chick.svg" alt="emoji_chick">
+                    <img src="img/emoji/emoji_chick.png" alt="emoji_chick">
                     <div class="progress">
                         <span class="fill"></span>
                     </div>
-                    <img src="img/emoji/emoji_lion.svg" alt="emoji_lion">
+                    <img src="img/emoji/emoji_lion.png" alt="emoji_lion">
                 </div>
 
                 <p>

@@ -1,5 +1,6 @@
 .page_main main{
     max-width: 700px;
+    margin: 0 40px 0 0;
 }
 
 .page_main .info_main{
@@ -54,10 +55,16 @@
 
 .page_main aside{
     width: calc(100% - 700px - 40px);
+    min-width: 300px;
 }
 
 .page_main aside > .g_title{
     margin-bottom: 20px;
+}
+
+.page_main aside img{
+    width: 36px;
+    height: 36px;
 }
 
 .page_main aside .progress{

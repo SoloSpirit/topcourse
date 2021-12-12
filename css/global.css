@@ -123,3 +123,8 @@ header .menu .profile:hover .chevron{
 article{
     padding: 40px 0;
 }
+
+article .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
