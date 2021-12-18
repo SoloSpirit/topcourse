@@ -1,19 +1,129 @@
-.text_card{
+.g_tva_text_card{
     border-radius: var(--border-radius);
+    padding: 28px;
+    margin: 35px;
 }
 
-.text_card.blue{
-    background: var(--color-tva-util-blue);
+.g_tva_text_card-bg_blue{
+    background: var(--color-tva-blue-l);
 }
 
-.text_card.green{
-    background: var(--color-tva-util-green);
+.g_tva_text_card-bg_green{
+    background: var(--color-tva-green-d);
 }
 
-.text_card.orange{
-    background: var(--color-tva-util-orange);
-}
-
-.text_card.violet{
+.g_tva_text_card-bg_violet{
     background: var(--color-tva-util-violet);
+}
+
+.g_tva_text_card-bg_orange{
+    background: var(--color-tva-orange-d);
+}
+
+.g_tva_text_card-bg_red{
+    background: var(--color-tva-red);
+}
+
+.g_tva_text_card-border_blue{
+    border: 3px solid var(--color-tva-blue-l);
+}
+
+.g_tva_text_card-border_green{
+    border: 3px solid var(--color-tva-green-d);
+}
+
+.g_tva_text_card-border_violet{
+    border: 3px solid var(--color-tva-util-violet);
+}
+
+.g_tva_text_card-border_orange{
+    border: 3px solid var(--color-tva-orange-d);
+}
+
+.g_tva_text_card-border_red{
+    border: 3px solid var(--color-tva-red);
+}
+
+.g_tva_text_card-gradient{
+    border-left: 10px solid;
+    padding-left: 18px;
+}
+
+.g_tva_text_card-gradient_blue{
+    border-color: var(--color-tva-blue-l);
+    background: linear-gradient(111.1deg, rgba(51, 157, 255, 0.7) 5.6%, #313335 58.79%);
+}
+
+.g_tva_text_card-gradient_green{
+    border-color: var(--color-tva-green-d);
+    background: linear-gradient(111.1deg, rgba(20, 198, 156, 0.7) 5.6%, #313335 58.79%);
+}
+
+.g_tva_text_card-gradient_violet{
+    border-color: var(--color-tva-util-violet);
+    background: linear-gradient(111.1deg, rgba(143, 111, 235, 0.7) 5.6%, #313335 58.79%);
+}
+
+.g_tva_text_card-gradient_orange{
+    border-color: var(--color-tva-orange-d);
+    background: linear-gradient(111.1deg, rgba(253, 116, 28, 0.7) 5.6%, #313335 58.79%);
+}
+
+.g_tva_text_card-gradient_red{
+    border-color: var(--color-tva-red);
+    background: linear-gradient(107.74deg, rgba(248, 108, 94, 0.6) 11.34%, rgba(232, 20, 32, 0) 60.81%), #313335;
+}
+
+.g_tva_text_card-tip{
+    padding-left: 100px;
+    position: relative;
+}
+
+.g_tva_text_card-tip::before{
+    background: url(../../img/icons/icon_lightbulb.svg) no-repeat center;
+    width: 48px;
+    height: 52px;
+    position: absolute;
+    content: '';
+    top: 28px;
+    left: 28px;
+}
+
+.g_tva_text_card-tip.g_tva_text_card-gradient{
+    padding-left: 90px;
+}
+
+.g_tva_text_card-tip.g_tva_text_card-gradient::before{
+    left: 18px;
+}
+
+.g_tva_text_card .card_caption{
+    min-height: 64px;
+    padding: 0 0 0 80px;
+    margin: 0 0 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.g_tva_text_card .card_caption img{
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: calc(50% - 32px);
+    left: 0;
+}
+
+.g_tva_text_card .card_caption h4{
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.g_tva_text_card .card_caption h5{
+    opacity: 0.8;
+    margin: 0;
+    font-weight: normal;
+    font-size: 16px;
 }
