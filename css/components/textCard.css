@@ -3,17 +3,17 @@
 }
 
 .text_card.blue{
-    background: var(--color-util-blue);
+    background: var(--color-tva-util-blue);
 }
 
 .text_card.green{
-    background: var(--color-util-green);
+    background: var(--color-tva-util-green);
 }
 
 .text_card.orange{
-    background: var(--color-util-orange);
+    background: var(--color-tva-util-orange);
 }
 
 .text_card.violet{
-    background: var(--color-util-violet);
+    background: var(--color-tva-util-violet);
 }

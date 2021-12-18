@@ -1,50 +1,50 @@
 :root{
-    --color-bg: #1C1D1F;
-    --color-white: #FFF;
-    --color-black: #000;
+    --color-tva-bg: #1C1D1F;
+    --color-tva-white: #FFF;
+    --color-tva-black: #000;
 
-    --color-gray: #313335;
-    --color-gray-d: #27292B;
-    --color-gray-l: #4D5053;
-    --color-gray-l2: #92979B;
-    --color-gray-l5: #F5F9FC;
+    --color-tva-gray: #313335;
+    --color-tva-gray-d: #27292B;
+    --color-tva-gray-l: #4D5053;
+    --color-tva-gray-l2: #92979B;
+    --color-tva-gray-l5: #F5F9FC;
 
-    --color-blue: #217DFF;
-    --color-blue-d: #286BEA;
-    --color-blue-l: #339DFF;
+    --color-tva-blue: #217DFF;
+    --color-tva-blue-d: #286BEA;
+    --color-tva-blue-l: #339DFF;
 
-    --color-green: #43E0BB;
-    --color-green-d: #14C69C;
+    --color-tva-green: #43E0BB;
+    --color-tva-green-d: #14C69C;
 
-    --color-red: #EB5757;
+    --color-tva-red: #EB5757;
 
-    --color-orange: #FFA321;
-    --color-orange-d: #FD741C;
-    --color-orange-l: #FFB523;
+    --color-tva-orange: #FFA321;
+    --color-tva-orange-d: #FD741C;
+    --color-tva-orange-l: #FFB523;
 
-    --color-pink: #EEBED3;
+    --color-tva-pink: #EEBED3;
 
-    --color-util-blue: #53B6FF;
-    --color-util-blue-d: #3384BF;
-    --color-util-blue-d2: #2E77AC;
+    --color-tva-util-blue: #53B6FF;
+    --color-tva-util-blue-d: #3384BF;
+    --color-tva-util-blue-d2: #2E77AC;
 
-    --color-util-green: #16C460;
-    --color-util-green-d: #17954C;
-    --color-util-green-d2: #158644;
+    --color-tva-util-green: #16C460;
+    --color-tva-util-green-d: #17954C;
+    --color-tva-util-green-d2: #158644;
 
-    --color-util-orange: #FFB540;
-    --color-util-orange-d: #AD650E;
-    --color-util-orange-d2: #9C5B0D;
+    --color-tva-util-orange: #FFB540;
+    --color-tva-util-orange-d: #AD650E;
+    --color-tva-util-orange-d2: #9C5B0D;
 
-    --color-util-violet: #8F6FEB;
-    --color-util-violet-d: #7050CB;
-    --color-util-violet-d2: #6548b7;
+    --color-tva-util-violet: #8F6FEB;
+    --color-tva-util-violet-d: #7050CB;
+    --color-tva-util-violet-d2: #6548b7;
 
-    --color-parts-red: #FF4433;
-    --color-parts-red-l: #FF2D1A;
-    --color-parts-red-tr: rgba(255, 74, 42, 0.2);
+    --color-tva-parts-red: #FF4433;
+    --color-tva-parts-red-l: #FF2D1A;
+    --color-tva-parts-red-tr: rgba(255, 74, 42, 0.2);
 
-    --color-parts-green: #7FFF00;
-    --color-parts-green-d: #59B200;
-    --color-parts-green-tr: rgba(47, 240, 42, 0.2);
+    --color-tva-parts-green: #7FFF00;
+    --color-tva-parts-green-d: #59B200;
+    --color-tva-parts-green-tr: rgba(47, 240, 42, 0.2);
 }

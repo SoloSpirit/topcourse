@@ -10,11 +10,11 @@ html{
 }
 
 body{
-    background: var(--color-bg);
+    background: var(--color-tva-bg);
     padding: 0;
     margin: 0;
-    color: var(--color-gray-l5);
-    font-size: 22px;
+    color: var(--color-tva-gray-l5);
+    font-size: 18px;
 }
 
 a{
@@ -36,7 +36,7 @@ p{
 }
 
 header{
-    border-bottom: 1px solid var(--color-gray-l);
+    border-bottom: 1px solid var(--color-tva-gray-l);
     height: var(--header-height);
 }
 
@@ -61,7 +61,7 @@ header .logo img{
     margin: 0 6px 0 0
 }
 
-header .logo .g_btn{
+header .logo .g_tva_btn{
     margin-left: 6px;
 }
 
@@ -86,7 +86,7 @@ header .menu .item{
 
 header .menu .item.active,
 header .menu .item:hover{
-    background: var(--color-gray);
+    background: var(--color-tva-gray);
 }
 
 header .menu .profile{
@@ -100,7 +100,7 @@ header .menu .profile{
 
 header .menu .profile.active,
 header .menu .profile:hover{
-    background: var(--color-gray-d);
+    background: var(--color-tva-gray-d);
 }
 
 header .menu .profile img{
@@ -109,7 +109,7 @@ header .menu .profile img{
 }
 
 header .menu .profile .chevron{
-    background: var(--color-gray);
+    background: var(--color-tva-gray);
     width: 10px;
     height: 5px;
     margin: 0 0 0 5px;
@@ -117,7 +117,7 @@ header .menu .profile .chevron{
 }
 
 header .menu .profile:hover .chevron{
-    background: var(--color-gray-l);
+    background: var(--color-tva-gray-l);
 }
 
 article{
@@ -126,5 +126,8 @@ article{
 
 article .wrapper{
     display: flex;
-    justify-content: space-between;
+}
+
+main{
+    max-width: 700px;
 }

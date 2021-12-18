@@ -1,26 +1,30 @@
+.page_main{
+    justify-content: space-between;
+}
+
 .page_main main{
-    max-width: 700px;
     margin: 0 40px 0 0;
 }
 
 .page_main .info_main{
     border-radius: var(--border-radius);
-    background: var(--color-pink);
+    background: var(--color-tva-pink);
     padding: 24px;
-    color: var(--color-black);
+    color: var(--color-tva-black);
+    font-size: 22px;
 }
 
-.page_main .info_main .g_title{
+.page_main .info_main .g_tva_title{
     margin: 16px 0 38px;
 }
 
-.page_main .info_main .g_btn{
+.page_main .info_main .g_tva_btn{
     width: 100%;
     max-width: 376px;
 }
 
 .page_main .info_telegram{
-    border: 1px solid var(--color-gray-l);
+    border: 1px solid var(--color-tva-gray-l);
     border-radius: var(--border-radius);
     padding: 18px 16px;
     margin: 14px 0 0;
@@ -28,17 +32,20 @@
     position: relative;
 }
 
-.page_main .info_telegram:hover{
-    background: var(--color-gray-d);
-}
-
-.page_main .info_telegram .g_title{
+.page_main .info_telegram .g_tva_title{
     margin: 0 0 16px;
 }
 
 .page_main .info_telegram p{
-    font-size: 18px;
     margin: 0;
+}
+
+.page_main .info_telegram a{
+    text-decoration: underline;
+}
+
+.page_main .info_telegram a:hover{
+    color: var(--color-tva-blue-l);
 }
 
 .page_main .info_telegram img{
@@ -58,7 +65,7 @@
     min-width: 300px;
 }
 
-.page_main aside > .g_title{
+.page_main aside > .g_tva_title{
     margin-bottom: 20px;
 }
 
@@ -69,7 +76,7 @@
 
 .page_main aside .progress{
     border-radius: 13px;
-    background: var(--color-gray);
+    background: var(--color-tva-gray);
     height: 16px;
     margin: 0 12px;
     overflow: hidden;
@@ -78,7 +85,7 @@
 
 .page_main aside .progress .fill{
     border-radius: 13px;
-    background: var(--color-blue-l);
+    background: var(--color-tva-blue-l);
     width: 15%;
     height: 100%;
     display: block;
