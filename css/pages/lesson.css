@@ -1,0 +1,94 @@
+.page_lesson .go_back{
+    margin: 0 40px 0 0;
+}
+
+.page_lesson .lesson_img{
+    border: var(--border-radius);
+    max-height: 400px;
+    margin: 0 0 40px;
+    overflow: hidden;
+}
+
+.page_lesson .lesson_img img{
+    width: 100%;
+}
+
+.page_lesson .tva_chat{
+    margin: 50px 0;
+}
+
+.page_lesson .tva_chat > div{
+    max-width: 500px;
+    margin: 0 0 20px 0;
+    box-sizing: border-box;
+}
+
+.page_lesson .tva_chat p{
+    margin: 0;
+}
+
+.page_lesson .tva_chat .msg_tv{
+    display: flex;
+    align-items: flex-start;
+}
+
+.page_lesson .tva_chat .msg_tv[data-variant]{
+    display: none;
+}
+
+.page_lesson .tva_chat .msg_tv .name{
+    color: var(--color-tva-blue-l5);
+    margin-bottom: 5px;
+}
+
+.page_lesson .tva_chat .msg_tv img{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: 0 20px 0 0;
+}
+
+.page_lesson .tva_chat .msg_user_variant{
+    cursor: pointer;
+    border: 2px solid var(--color-tva-blue-l);
+    border-radius: var(--border-radius);
+    background: var(--color-tva-gray-d);
+    width: calc(100% - 65px);
+    padding: 20px;
+    margin-left: auto;
+}
+
+.page_lesson .tva_chat .msg_user_variant:hover{
+    background: var(--color-tva-gray);
+}
+
+.page_lesson .tva_chat .msg_user_variant.selected{
+    pointer-events: none;
+    border: none;
+    background: var(--color-tva-gray);
+}
+
+.page_lesson .tva_chat .msg_tv + .msg_user_variant{
+    margin-top: 40px;
+}
+
+.page_lesson .tva_chat .msg_user_variant + .msg_tv{
+    margin-top: 40px;
+}
+
+.page_lesson .tva_chat .g_tva_btn{
+    width: calc(100% - 65px);
+    max-width: 250px;
+    margin: 40px 0 0 auto;
+    display: none;
+}
+
+@media only screen and (max-width: 1200px){
+    .page_lesson .go_back span{
+        display: none;
+    }
+
+    .page_lesson .go_back .icon{
+        margin: 0;
+    }
+}

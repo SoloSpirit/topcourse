@@ -15,6 +15,7 @@ body{
     margin: 0;
     color: var(--color-tva-gray-l5);
     font-size: 18px;
+    line-height: 1.5;
 }
 
 a{
@@ -24,7 +25,12 @@ a{
 
 p{
     margin: 20px 0;
-    line-height: 1.5;
+}
+
+button{
+    border: none;
+    padding: 0;
+    outline: none;
 }
 
 .wrapper{
@@ -126,6 +132,7 @@ article{
 
 article .wrapper{
     display: flex;
+    align-items: flex-start;
 }
 
 main{

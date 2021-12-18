@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/components/lessonCard.css">
     <link rel="stylesheet" href="css/components/textCard.css">
     <script src="js/common.js"></script>
+    <script src="js/lesson.js"></script>
     <title>Lesson</title>
 </head>
 <body>
@@ -52,9 +53,9 @@
 
     <article class="page_lesson">
         <div class="wrapper">
-            <a href="index.html" class="go_back">
-                <img src="/img/icons/icon_back.svg" alt="icon_back">
-                К модулям
+            <a href="index.html" class="go_back g_tva_btn g_tva_btn-bordered">
+                <img src="img/icons/icon_back.svg" alt="icon_back" class="icon">
+                <span>К модулям</span>
             </a>
 
             <main>
@@ -65,28 +66,51 @@
                 <h2 class="g_tva_title">Модуль 1. Урок 3</h2>
                 <h1 class="g_tva_title">Медиамоделирование</h1>
 
-                <div class="tv_chat">
+                <div class="tva_chat">
                     <div class="msg_tv">
                         <img src="img/avatar_tv.png" alt="avatar_tv">
-                        <p class="name">Топвизор</p>
-                        <p class="name">Зачем вам этот курс?</p>
+                        <div>
+                            <p class="name">Топвизор</p>
+                            <p>Зачем вам этот курс?</p>
+                        </div>
                     </div>
 
-                    <div class="msg_user">
-                        Хочу освежить свои знания.
+                    <div class="msg_user_variant" data-action="select_variant" data-variant="1">
+                        Хочу научится SEO с нуля.
+                    </div>
+                    <div class="msg_user_variant" data-action="select_variant" data-variant="2">
+                        Хочу посмотреть все компоненты.
+                    </div>
+                    <div class="msg_user_variant" data-action="select_variant" data-variant="3">
+                        Хочу посмотреть маркированные и нумерованные списки.
                     </div>
 
                     <div class="msg_tv" data-variant="1">
                         <img src="img/avatar_tv.png" alt="avatar_tv">
-                        <p class="name">Топвизор</p>
-                        <p class="name">Зачем вам этот курс?</p>
+                        <div>
+                            <p class="name">Топвизор</p>
+                            <p>
+                                Теперь у нас есть всё, чтобы проект на самом старте не пошёл под откос. Мы знаем, что
+                                такое мир читателя.
+                            </p>
+                        </div>
                     </div>
-
                     <div class="msg_tv" data-variant="2">
                         <img src="img/avatar_tv.png" alt="avatar_tv">
-                        <p class="name">Топвизор</p>
-                        <p class="name">Зачем вам этот курс?</p>
+                        <div>
+                            <p class="name">Топвизор</p>
+                            <p>Нажми на кнопку - получишь результат ;)</p>
+                        </div>
                     </div>
+                    <div class="msg_tv" data-variant="3">
+                        <img src="img/avatar_tv.png" alt="avatar_tv">
+                        <div>
+                            <p class="name">Топвизор</p>
+                            <p>Нажми на кнопку - получишь результат ;)</p>
+                        </div>
+                    </div>
+
+                    <button class="g_tva_btn" data-action="go_next">Дальше!</button>
                 </div>
             </main>
         </div>

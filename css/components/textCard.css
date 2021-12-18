@@ -1,7 +1,7 @@
 .g_tva_text_card{
     border-radius: var(--border-radius);
     padding: 28px;
-    margin: 35px;
+    margin: 35px 0;
 }
 
 .g_tva_text_card-bg_blue{
@@ -79,7 +79,7 @@
     position: relative;
 }
 
-.g_tva_text_card-tip::before{
+.g_tva_text_card-tip:before{
     background: url(../../img/icons/icon_lightbulb.svg) no-repeat center;
     width: 48px;
     height: 52px;
@@ -93,37 +93,31 @@
     padding-left: 90px;
 }
 
-.g_tva_text_card-tip.g_tva_text_card-gradient::before{
+.g_tva_text_card-tip.g_tva_text_card-gradient:before{
     left: 18px;
 }
 
-.g_tva_text_card .card_caption{
-    min-height: 64px;
-    padding: 0 0 0 80px;
+.g_tva_text_card .caption{
     margin: 0 0 15px 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
 }
 
-.g_tva_text_card .card_caption img{
+.g_tva_text_card .caption img{
     border-radius: 50%;
-    width: 64px;
-    height: 64px;
-    position: absolute;
-    top: calc(50% - 32px);
-    left: 0;
+    width: 60px;
+    height: 60px;
 }
 
-.g_tva_text_card .card_caption h4{
+.g_tva_text_card .caption img + div{
+    margin: 5px 0 0 15px;
+}
+
+.g_tva_text_card .caption h4.g_tva_title{
     margin: 0 0 5px 0;
-    font-size: 18px;
 }
 
-.g_tva_text_card .card_caption h5{
+.g_tva_text_card .caption h5.g_tva_title{
     opacity: 0.8;
     margin: 0;
     font-weight: normal;
-    font-size: 16px;
 }
