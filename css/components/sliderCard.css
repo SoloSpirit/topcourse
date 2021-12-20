@@ -1,0 +1,189 @@
+.g_tva_slider_card{
+    border-radius: var(--border-radius);
+    padding: 24px 8px 8px 8px;
+    margin: 45px 0;
+    position: relative;
+}
+
+.g_tva_slider_card.blue{
+    background: var(--color-tva-util-blue);
+}
+
+.g_tva_slider_card.green{
+    background: var(--color-tva-util-green);
+}
+
+.g_tva_slider_card.violet{
+    background: var(--color-tva-util-violet);
+}
+
+.g_tva_slider_card.orange{
+    background: var(--color-tva-util-orange);
+}
+
+.g_tva_slider_card > h2.g_tva_title{
+    margin: 0 0 15px 20px;
+}
+
+.g_tva_slider_card h2.g_tva_title{
+    font-size: 24px;
+}
+
+.g_tva_slider_card .info{
+    border-radius: var(--border-radius-m);
+    background: var(--color-tva-gray-d);
+    padding: 40px 85px 25px;
+    position: relative;
+    z-index: 3;
+}
+
+.g_tva_slider_card .info h2.g_tva_title{
+    margin: 0 0 15px 0;
+}
+
+.g_tva_slider_card.blue .info h2.g_tva_title{
+    color: var(--color-tva-util-blue-l);
+}
+
+.g_tva_slider_card.green .info h2.g_tva_title{
+    color: var(--color-tva-util-green-l);
+}
+
+.g_tva_slider_card.violet .info h2.g_tva_title{
+    color: var(--color-tva-util-violet-l);
+}
+
+.g_tva_slider_card.orange .info h2.g_tva_title{
+    color: var(--color-tva-util-orange-l);
+}
+
+.g_tva_slider_card .info p{
+    margin: 0;
+}
+
+.g_tva_slider_card .info > img.prev,
+.g_tva_slider_card .info > img.next{
+    cursor: pointer;
+    width: 35px;
+    height: 40px;
+    position: absolute;
+    top: 85px;
+}
+
+.g_tva_slider_card .info > img.prev[aria-disabled='true'],
+.g_tva_slider_card .info > img.next[aria-disabled='true']{
+   display: none;
+}
+
+.g_tva_slider_card .info > img.prev{
+    left: 30px;
+}
+
+.g_tva_slider_card .info > img.next{
+    right: 30px;
+}
+
+.g_tva_slider_card .info .tns-outer{
+    width: 100%;
+    position: relative;
+}
+
+.g_tva_slider_card .info .tns-outer:before,
+.g_tva_slider_card .info .tns-outer:after{
+    content: '';
+    box-shadow: 0 0 5px 10px var(--color-tva-gray-d);
+    background: var(--color-tva-gray-d);
+    width: 1px;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.g_tva_slider_card .info .tns-outer:before{
+    left: 0;
+}
+
+.g_tva_slider_card .info .tns-outer:after{
+    right: 0;
+}
+
+.g_tva_slider_card .info .tns-nav{
+    height: 8px;
+    margin: 25px 0 0 0;
+    text-align: center;
+}
+
+.g_tva_slider_card .info .tns-nav > button{
+    border-radius: 50%;
+    background: var(--color-tva-gray-l);
+    width: 8px;
+    height: 8px;
+    vertical-align: top;
+}
+
+.g_tva_slider_card .info .tns-nav > button:not(:last-child){
+   margin: 0 3px 0 0;
+}
+
+.g_tva_slider_card .info .tns-nav .tns-nav-active{
+    background: var(--color-tva-gray-l2);
+}
+
+.g_tva_slider_card:before,
+.g_tva_slider_card:after{
+    content: '';
+    border-radius: var(--border-radius-m);
+    width: 300px;
+    height: 30px;
+    position: absolute;
+}
+
+.g_tva_slider_card:before{
+    transform: rotate(-3deg);
+    top: 63px;
+    right: 22px;
+    z-index: 2;
+}
+
+.g_tva_slider_card.blue:before{
+    background: var(--color-tva-util-blue-d);
+}
+
+.g_tva_slider_card.green:before{
+    background: var(--color-tva-util-green-d);
+}
+
+.g_tva_slider_card.violet:before{
+    background: var(--color-tva-util-violet-d);
+}
+
+.g_tva_slider_card.orange:before{
+    background: var(--color-tva-util-orange-d);
+}
+
+.g_tva_slider_card:after{
+    transform: rotate(-5deg);
+    top: 56px;
+    right: 37px;
+    z-index: 1;
+}
+
+.g_tva_slider_card.blue:after{
+    background: var(--color-tva-util-blue-d2);
+}
+
+.g_tva_slider_card.green:after{
+    background: var(--color-tva-util-green-d2);
+}
+
+.g_tva_slider_card.violet:after{
+    background: var(--color-tva-util-violet-d2);
+}
+
+.g_tva_slider_card.orange:after{
+    background: var(--color-tva-util-orange-d2);
+}
+
+
