@@ -27,13 +27,9 @@
     margin: 0;
 }
 
-.page_lesson .tva_chat .msg_tv{
+.page_lesson .tva_chat .msg_tv:not(.g_tva_hidden){
     display: flex;
     align-items: flex-start;
-}
-
-.page_lesson .tva_chat .msg_tv[data-variant]{
-    display: none;
 }
 
 .page_lesson .tva_chat .msg_tv .name{
@@ -76,11 +72,10 @@
     margin-top: 40px;
 }
 
-.page_lesson .tva_chat .g_tva_btn{
+.page_lesson .tva_chat [data-action="go_next"]{
     width: calc(100% - 65px);
     max-width: 250px;
     margin: 40px 0 0 auto;
-    display: none;
 }
 
 @media only screen and (max-width: 1200px){
