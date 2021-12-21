@@ -1,0 +1,30 @@
+.g_tva_small_test {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-tva-gray-l2);
+    padding: 35px 28px 45px;
+}
+
+.g_tva_small_test .progress {
+    text-align: center;
+}
+
+.g_tva_small_test .progress > span {
+    border-radius: var(--border-radius-l);;
+    background: var(--color-tva-gray-l);
+    width: 25px;
+    height: 16px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.g_tva_small_test .progress > span.blue {
+    border: 2px solid var(--color-tva-blue-l);
+}
+
+.g_tva_small_test .progress > span.green {
+    background: var(--color-tva-util-green);
+}
+
+.g_tva_small_test .progress > span.red {
+    background: var(--color-tva-red);
+}

@@ -13,7 +13,7 @@
     margin-bottom: 0;
 }
 
-.g_tva_lesson_card:before{
+.g_tva_lesson_card::before{
     content: '';
     border: 2px solid var(--color-tva-gray-l2);
     border-radius: 50%;
@@ -26,12 +26,12 @@
     left: -41px;
 }
 
-.g_tva_lesson_card-finished:before,
-.g_tva_lesson_card-in_progress:before{
+.g_tva_lesson_card-finished::before,
+.g_tva_lesson_card-in_progress::before{
     border-color: var(--color-tva-blue-l);
 }
 
-.g_tva_lesson_card-finished:before{
+.g_tva_lesson_card-finished::before{
     background-color: var(--color-tva-blue-l);
     background-image: url(../../img/icons/icon_check.svg);
     background-size: 12px;
@@ -94,7 +94,7 @@
         border-color: var(--color-tva-blue);
     }
 
-    .g_tva_lesson_card:before{
+    .g_tva_lesson_card::before{
         display: none;
     }
 

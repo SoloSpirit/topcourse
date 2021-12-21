@@ -21,6 +21,61 @@
     background: var(--color-tva-util-orange);
 }
 
+.g_tva_slider_card::before,
+.g_tva_slider_card::after{
+    content: '';
+    border-radius: var(--border-radius-m);
+    width: 300px;
+    height: 30px;
+    position: absolute;
+}
+
+.g_tva_slider_card::before{
+    transform: rotate(-3deg);
+    top: 63px;
+    right: 22px;
+    z-index: 2;
+}
+
+.g_tva_slider_card.blue::before{
+    background: var(--color-tva-util-blue-d);
+}
+
+.g_tva_slider_card.green::before{
+    background: var(--color-tva-util-green-d);
+}
+
+.g_tva_slider_card.violet::before{
+    background: var(--color-tva-util-violet-d);
+}
+
+.g_tva_slider_card.orange::before{
+    background: var(--color-tva-util-orange-d);
+}
+
+.g_tva_slider_card::after{
+    transform: rotate(-5deg);
+    top: 56px;
+    right: 37px;
+    z-index: 1;
+}
+
+.g_tva_slider_card.blue::after{
+    background: var(--color-tva-util-blue-d2);
+}
+
+.g_tva_slider_card.green::after{
+    background: var(--color-tva-util-green-d2);
+}
+
+.g_tva_slider_card.violet::after{
+    background: var(--color-tva-util-violet-d2);
+}
+
+.g_tva_slider_card.orange::after{
+    background: var(--color-tva-util-orange-d2);
+}
+
 .g_tva_slider_card > h2.g_tva_title{
     margin: 0 0 15px 20px;
 }
@@ -88,8 +143,8 @@
     position: relative;
 }
 
-.g_tva_slider_card .info .tns-outer:before,
-.g_tva_slider_card .info .tns-outer:after{
+.g_tva_slider_card .info .tns-outer::before,
+.g_tva_slider_card .info .tns-outer::after{
     content: '';
     box-shadow: 0 0 5px 10px var(--color-tva-gray-d);
     background: var(--color-tva-gray-d);
@@ -101,11 +156,11 @@
     z-index: 1;
 }
 
-.g_tva_slider_card .info .tns-outer:before{
+.g_tva_slider_card .info .tns-outer::before{
     left: 0;
 }
 
-.g_tva_slider_card .info .tns-outer:after{
+.g_tva_slider_card .info .tns-outer::after{
     right: 0;
 }
 
@@ -131,59 +186,59 @@
     background: var(--color-tva-gray-l2);
 }
 
-.g_tva_slider_card:before,
-.g_tva_slider_card:after{
-    content: '';
-    border-radius: var(--border-radius-m);
-    width: 300px;
-    height: 30px;
-    position: absolute;
-}
+@media only screen and (max-width: 900px) {
+    .g_tva_slider_card{
+        margin: 35px 0;
+    }
 
-.g_tva_slider_card:before{
-    transform: rotate(-3deg);
-    top: 63px;
-    right: 22px;
-    z-index: 2;
-}
+    .g_tva_slider_card::before,
+    .g_tva_slider_card::after{
+        content: none;
+    }
 
-.g_tva_slider_card.blue:before{
-    background: var(--color-tva-util-blue-d);
-}
+    .g_tva_slider_card > h2.g_tva_title{
+        font-size: 18px;
+    }
 
-.g_tva_slider_card.green:before{
-    background: var(--color-tva-util-green-d);
-}
+    .g_tva_slider_card .info{
+        border-radius: 0;
+        background: none;
+        padding: 0;
+        font-size: 16px;
+        overflow: auto;
+    }
 
-.g_tva_slider_card.violet:before{
-    background: var(--color-tva-util-violet-d);
-}
+    .g_tva_slider_card .info h2.g_tva_title{
+        margin: 0 0 25px 0;
+        font-size: 16px;
+    }
 
-.g_tva_slider_card.orange:before{
-    background: var(--color-tva-util-orange-d);
-}
+    .g_tva_slider_card .info > img.prev,
+    .g_tva_slider_card .info > img.next{
+        display: none;
+    }
 
-.g_tva_slider_card:after{
-    transform: rotate(-5deg);
-    top: 56px;
-    right: 37px;
-    z-index: 1;
-}
+    .g_tva_slider_card .info_slider {
+        width: fit-content;
+        display: flex;
+    }
 
-.g_tva_slider_card.blue:after{
-    background: var(--color-tva-util-blue-d2);
-}
+    .g_tva_slider_card .info_slider .item{
+        border-radius: var(--border-radius-m);
+        background: var(--color-tva-gray-d);
+        width: calc(100vw - 110px);
+        height: 100%;
+        padding: 30px 15px 35px;
+    }
 
-.g_tva_slider_card.green:after{
-    background: var(--color-tva-util-green-d2);
-}
+    .g_tva_slider_card .info_slider .item:not(:last-child){
+        margin: 0 8px 0 0;
+    }
 
-.g_tva_slider_card.violet:after{
-    background: var(--color-tva-util-violet-d2);
-}
-
-.g_tva_slider_card.orange:after{
-    background: var(--color-tva-util-orange-d2);
+    .g_tva_slider_card .info .tns-outer::before,
+    .g_tva_slider_card .info .tns-outer::after{
+        content: none;
+    }
 }
 
 

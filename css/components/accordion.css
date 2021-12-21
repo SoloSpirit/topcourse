@@ -1,0 +1,117 @@
+.g_tva_accordion{
+    margin: 35px 0;
+}
+
+.g_tva_accordion .title{
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    transition: background-color .2s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.g_tva_accordion.gray .title{
+    background: var(--color-tva-gray);
+}
+
+.g_tva_accordion.gray .title:hover{
+    background: var(--color-tva-gray-l);
+}
+
+.g_tva_accordion.blue .title{
+    background: var(--color-tva-blue);
+}
+
+.g_tva_accordion.blue .title:hover{
+    background: var(--color-tva-blue-l);
+}
+
+.g_tva_accordion.green .title{
+    background: var(--color-tva-green-d);
+}
+
+.g_tva_accordion.green .title:hover{
+    background: var(--color-tva-green);
+}
+
+.g_tva_accordion.orange .title{
+    background: var(--color-tva-orange);
+}
+
+.g_tva_accordion.orange .title:hover{
+    background: var(--color-tva-orange-l);
+}
+
+.g_tva_accordion .title h4.g_tva_title{
+   margin: 0;
+}
+
+.g_tva_accordion .title > img{
+    width: 35px;
+    height: 40px;
+    margin: 0 20px 0 0;
+}
+
+.g_tva_accordion .title > img:nth-child(2){
+    display: none;
+}
+
+.g_tva_accordion.active .title > img:first-child{
+    display: none;
+}
+
+.g_tva_accordion.active .title > img:nth-child(2){
+    display: block;
+}
+
+.g_tva_accordion .content_wrapper {
+    border-radius: var(--border-radius);
+    max-height: 0;
+    height: 100%;
+    margin-top: -15px;
+    overflow: hidden;
+    transition: max-height .4s ease-in-out;
+}
+
+.g_tva_accordion.gray .content_wrapper {
+    border: 4px solid var(--color-tva-gray);
+}
+
+.g_tva_accordion.blue .content_wrapper {
+    border: 4px solid var(--color-tva-blue);
+}
+
+.g_tva_accordion.green .content_wrapper {
+    border: 4px solid var(--color-tva-green-d);
+}
+
+.g_tva_accordion.orange .content_wrapper {
+    border: 4px solid var(--color-tva-orange);
+}
+
+.g_tva_accordion.active .content_wrapper{
+    max-height: 1000px;
+}
+
+.g_tva_accordion .content_wrapper .content{
+    padding: 53px 28px 38px;
+}
+
+@media only screen and (max-width: 900px) {
+    .g_tva_accordion {
+        width: 100vw;
+        margin-left: -12px;
+    }
+
+    .g_tva_accordion .title{
+        padding: 18px 16px;
+        border-radius: 0;
+    }
+
+    .g_tva_accordion .content_wrapper {
+        border-radius: 0;
+    }
+}

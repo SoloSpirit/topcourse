@@ -1,7 +1,9 @@
 :root{
     --border-radius: 8px;
+    --border-radius-l: 12px;
     --border-radius-m: 6px;
     --border-radius-s: 4px;
+    --border-radius-xs: 2px;
 }
 
 .g_tva_flex{

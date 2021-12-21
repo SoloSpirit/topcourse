@@ -1,0 +1,79 @@
+.g_tva_list{
+    padding: 0;
+    list-style: none;
+}
+
+ol.g_tva_list {
+    counter-reset: ol-counter;
+}
+
+.g_tva_list > li{
+    padding: 0 0 0 35px;
+    position: relative;
+}
+
+.g_tva_list > li:not(:last-child){
+    margin-bottom: 25px;
+}
+
+.g_tva_list > li::before{
+    content: '';
+    position: absolute;
+}
+
+.g_tva_list-bullet > li::before{
+    border-radius: 50%;
+    background: var(--color-tva-blue-l);
+    width: 12px;
+    height: 12px;
+    top: 12px;
+    left: 6px;
+}
+
+.g_tva_list-plus > li::before{
+    background: url(../../img/icons/icon_bullet-plus.svg) no-repeat center;
+    width: 18px;
+    height: 18px;
+    top: 5px;
+    left: 3px;
+}
+
+.g_tva_list-minus > li::before{
+    border-radius: var(--border-radius-s);
+    background: var(--color-tva-parts-red);
+    width: 18px;
+    height: 4px;
+    top: 14px;
+    left: 3px;
+}
+
+.g_tva_list-emoji > li::before{
+    background: url(../../img/emoji/emoji_point-right.png) no-repeat center;
+    width: 18px;
+    height: 18px;
+    top: 5px;
+    left: 3px;
+}
+
+.g_tva_list-num > li {
+    counter-increment: ol-counter;
+}
+
+.g_tva_list-num > li::before{
+    content: counter(ol-counter);
+    border-radius: var(--border-radius-xs);
+    background: var(--color-tva-gray-l);
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    text-align: center;
+    top: 0;
+    left: 0;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .g_tva_list > li:not(:last-child){
+        margin-bottom: 12px;
+    }
+}
