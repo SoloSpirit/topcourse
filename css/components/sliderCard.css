@@ -138,13 +138,14 @@
     right: 30px;
 }
 
-.g_tva_slider_card .info .tns-outer{
+.g_tva_slider_card .info .owl-stage-outer{
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
 
-.g_tva_slider_card .info .tns-outer::before,
-.g_tva_slider_card .info .tns-outer::after{
+.g_tva_slider_card .info .owl-stage-outer::before,
+.g_tva_slider_card .info .owl-stage-outer::after{
     content: '';
     box-shadow: 0 0 5px 10px var(--color-tva-gray-d);
     background: var(--color-tva-gray-d);
@@ -156,21 +157,26 @@
     z-index: 1;
 }
 
-.g_tva_slider_card .info .tns-outer::before{
-    left: 0;
+.g_tva_slider_card .info .owl-stage-outer::before{
+    left: -10px;
 }
 
-.g_tva_slider_card .info .tns-outer::after{
-    right: 0;
+.g_tva_slider_card .info .owl-stage-outer::after{
+    right: -10px;
 }
 
-.g_tva_slider_card .info .tns-nav{
+.g_tva_slider_card .info .owl-stage{
+    display: flex;
+}
+
+.g_tva_slider_card .info .owl-dots{
+    cursor: pointer;
     height: 8px;
     margin: 25px 0 0 0;
     text-align: center;
 }
 
-.g_tva_slider_card .info .tns-nav > button{
+.g_tva_slider_card .info .owl-dots .owl-dot{
     border-radius: 50%;
     background: var(--color-tva-gray-l);
     width: 8px;
@@ -178,17 +184,50 @@
     vertical-align: top;
 }
 
-.g_tva_slider_card .info .tns-nav > button:not(:last-child){
-   margin: 0 3px 0 0;
+.g_tva_slider_card .info .owl-dots .owl-dot:not(:last-child){
+    margin-right: 6px;
 }
 
-.g_tva_slider_card .info .tns-nav .tns-nav-active{
+.g_tva_slider_card .info .owl-dots .owl-dot.active{
     background: var(--color-tva-gray-l2);
+}
+
+.g_tva_slider_card .info .owl-nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.g_tva_slider_card .info .owl-nav button{
+    cursor: pointer;
+    background: none;
+}
+
+.g_tva_slider_card .info .owl-nav button.owl-next{
+    margin-left: auto;
+}
+
+.g_tva_slider_card .info .owl-nav button.disabled{
+    display: none;
+}
+
+.g_tva_slider_card .info .owl-nav button img{
+    width: 35px;
+    height: 40px;
 }
 
 @media only screen and (max-width: 900px) {
     .g_tva_slider_card{
-        margin: 35px 0;
+        border-radius: 0;
+        width: calc(100% + 24px);
+        margin: 35px 0 35px -12px;
+        box-sizing: border-box;
     }
 
     .g_tva_slider_card::before,
@@ -205,7 +244,6 @@
         background: none;
         padding: 0;
         font-size: 16px;
-        overflow: auto;
     }
 
     .g_tva_slider_card .info h2.g_tva_title{
@@ -213,32 +251,25 @@
         font-size: 16px;
     }
 
-    .g_tva_slider_card .info > img.prev,
-    .g_tva_slider_card .info > img.next{
-        display: none;
-    }
-
-    .g_tva_slider_card .info_slider {
-        width: fit-content;
-        display: flex;
-    }
-
     .g_tva_slider_card .info_slider .item{
         border-radius: var(--border-radius-m);
         background: var(--color-tva-gray-d);
-        width: calc(100vw - 110px);
-        height: 100%;
         padding: 30px 15px 35px;
     }
 
-    .g_tva_slider_card .info_slider .item:not(:last-child){
-        margin: 0 8px 0 0;
+    .g_tva_slider_card .info .owl-stage{
+        position: relative;
+        left: -20px;
     }
 
-    .g_tva_slider_card .info .tns-outer::before,
-    .g_tva_slider_card .info .tns-outer::after{
+    .g_tva_slider_card .info .owl-stage-outer::before,
+    .g_tva_slider_card .info .owl-stage-outer::after{
         content: none;
     }
-}
 
+    .g_tva_slider_card .info .owl-dots,
+    .g_tva_slider_card .info .owl-nav{
+        display: none;
+    }
+}
 
