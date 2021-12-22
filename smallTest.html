@@ -52,16 +52,28 @@
             <section>
                 <div class="g_tva_small_test">
                     <div class="progress"></div>
+                    <div class="test">
+                        <form class="form" id="smallTest"></form>
+                        <div class="actions">
+                            <button type="submit" form="smallTest">Ответить</button>
+                            <button type="button" data-action="next">Следующий вопрос</button>
+                            <button type="button" data-action="restart">
+                                <img src="img/icons/icon_undo.svg" alt="restart">
+                                Начать заново
+                            </button>
+                        </div>
+                    </div>
 
-                   <form class="form">
-
-
-                       <div class="questions">
-
-                       </div>
-
-                       <div class="actions"></div>
-                   </form>
+                    <div class="test_results">
+                        <h4 class="g_tva_title">Тест</h4>
+                        <h2 class="test_title g_tva_title"></h2>
+                        <p>Результаты: <span class="test_counter"></span></p>
+                        <p class="conclusion"></p>
+                        <div class="actions">
+                            <button type="button" data-action="restart">Повторить тест</button>
+                            <button type="button" data-action="share">Поделиться результатом</button>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
