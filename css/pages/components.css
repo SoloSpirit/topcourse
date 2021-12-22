@@ -1,0 +1,8 @@
+.page_components section > h2.g_tva_title{
+    cursor: pointer;
+    width: fit-content;
+}
+
+.page_components section > h2.g_tva_title:hover .g_tva_chevron{
+    background: var(--color-tva-gray-l);
+}

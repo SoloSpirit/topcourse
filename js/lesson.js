@@ -1,6 +1,3 @@
-const HIDDEN_STATE = 'g_tva_hidden';
-const PROJECT_PATH = `topcourse`;
-
 let tvaChat;
 let selectedVariant = 1;
 
@@ -50,9 +47,6 @@ handleGoNext = (button) => {
             break;
         case 2:
             location.href = `${location.origin}/${PROJECT_PATH}/components.html`;
-            break;
-        case 3:
-            location.href = `${location.origin}/${PROJECT_PATH}/lists.html`;
             break;
     }
 }

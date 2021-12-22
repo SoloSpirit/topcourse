@@ -1,65 +1,59 @@
 .g_tva_accordion {
     --g_tva_accordion-border: 4px;
-
-    border-radius: var(--border-radius);
     margin: 35px 0;
-    overflow: hidden;
-}
-
-.g_tva_accordion-gray {
-    border: var(--g_tva_accordion-border) solid var(--color-tva-gray);
-}
-
-.g_tva_accordion-blue {
-    border: var(--g_tva_accordion-border) solid var(--color-tva-blue);
-}
-
-.g_tva_accordion-green {
-    border: var(--g_tva_accordion-border) solid var(--color-tva-green-d);
-}
-
-.g_tva_accordion-orange {
-    border: var(--g_tva_accordion-border) solid var(--color-tva-orange);
 }
 
 .g_tva_accordion .title {
     cursor: pointer;
+    border: var(--g_tva_accordion-border) solid var(--color-tva-gray);
+    border-radius: var(--g-tva-border-radius);
     padding: 20px;
     display: flex;
     align-items: center;
-    transition: background var(--transition) ease-in-out;
 }
 
 .g_tva_accordion-gray .title {
+    border-color: var(--color-tva-gray);
     background: var(--color-tva-gray);
 }
 
 .g_tva_accordion-gray .title:hover {
+    border-color: var(--color-tva-gray-l);
     background: var(--color-tva-gray-l);
 }
 
 .g_tva_accordion-blue .title {
+    border-color: var(--color-tva-blue);
     background: var(--color-tva-blue);
 }
 
 .g_tva_accordion-blue .title:hover {
+    border-color: var(--color-tva-blue-l);
     background: var(--color-tva-blue-l);
 }
 
 .g_tva_accordion-green .title {
+    border-color: var(--color-tva-green-d);
     background: var(--color-tva-green-d);
 }
 
 .g_tva_accordion-green .title:hover {
+    border-color: var(--color-tva-green);
     background: var(--color-tva-green);
 }
 
 .g_tva_accordion-orange .title {
+    border-color: var(--color-tva-orange);
     background: var(--color-tva-orange);
 }
 
 .g_tva_accordion-orange .title:hover {
+    border-color: var(--color-tva-orange-l);
     background: var(--color-tva-orange-l);
+}
+
+.g_tva_accordion-active .title {
+    border-radius: var(--g-tva-border-radius) var(--g-tva-border-radius) 0 0;
 }
 
 .g_tva_accordion .title h4.g_tva_title {
@@ -85,7 +79,31 @@
 }
 
 .g_tva_accordion .content {
-    padding: 53px 28px 38px;
+    border: var(--g_tva_accordion-border) solid var(--color-tva-gray);
+    border-top: none;
+    border-radius: 0 0 var(--g-tva-border-radius) var(--g-tva-border-radius);
+    padding: 40px 28px;
+    display: none;
+}
+
+.g_tva_accordion-active .content{
+    display: block;
+}
+
+.g_tva_accordion-gray .content {
+    border-color: var(--color-tva-gray);
+}
+
+.g_tva_accordion-blue .content {
+    border-color: var(--color-tva-blue);
+}
+
+.g_tva_accordion-green .content {
+    border-color: var(--color-tva-green-d);
+}
+
+.g_tva_accordion-orange .content {
+    border-color: var(--color-tva-orange);
 }
 
 @media only screen and (max-width: 900px) {

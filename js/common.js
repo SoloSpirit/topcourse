@@ -1,3 +1,6 @@
+const HIDDEN_STATE = 'g_tva_hidden';
+const PROJECT_PATH = `topcourse`;
+
 const insertLinkCss = (href) => {
     const head = document.getElementsByTagName('head')[0];
     const link = document.createElement('link');
