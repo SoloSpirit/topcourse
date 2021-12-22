@@ -1,5 +1,5 @@
 .g_tva_slider_card {
-    border-radius: var(--border-radius);
+    border-radius: var(--g-tva-border-radius);
     padding: 24px 8px 8px 8px;
     margin: 40px 0;
     position: relative;
@@ -24,7 +24,7 @@
 .g_tva_slider_card::before,
 .g_tva_slider_card::after {
     content: '';
-    border-radius: var(--border-radius-m);
+    border-radius: var(--g-tva-border-radius-m);
     width: 300px;
     height: 30px;
     position: absolute;
@@ -84,40 +84,40 @@
     font-size: 24px;
 }
 
-.g_tva_slider_card .info {
-    border-radius: var(--border-radius-m);
+.g_tva_slider_card .slider_container {
+    border-radius: var(--g-tva-border-radius-m);
     background: var(--color-tva-gray-d);
     padding: 40px 85px 25px;
     position: relative;
     z-index: 3;
 }
 
-.g_tva_slider_card .info h2.g_tva_title {
+.g_tva_slider_card .slider_container h2.g_tva_title {
     margin: 0 0 15px 0;
 }
 
-.g_tva_slider_card-blue .info h2.g_tva_title {
+.g_tva_slider_card-blue .slider_container h2.g_tva_title {
     color: var(--color-tva-util-blue-l);
 }
 
-.g_tva_slider_card-green .info h2.g_tva_title {
+.g_tva_slider_card-green .slider_container h2.g_tva_title {
     color: var(--color-tva-util-green-l);
 }
 
-.g_tva_slider_card-violet .info h2.g_tva_title {
+.g_tva_slider_card-violet .slider_container h2.g_tva_title {
     color: var(--color-tva-util-violet-l);
 }
 
-.g_tva_slider_card-orange .info h2.g_tva_title {
+.g_tva_slider_card-orange .slider_container h2.g_tva_title {
     color: var(--color-tva-util-orange-l);
 }
 
-.g_tva_slider_card .info p {
+.g_tva_slider_card .slider_container p {
     margin: 0;
 }
 
-.g_tva_slider_card .info > img.prev,
-.g_tva_slider_card .info > img.next {
+.g_tva_slider_card .slider_container > img.prev,
+.g_tva_slider_card .slider_container > img.next {
     cursor: pointer;
     width: 35px;
     height: 40px;
@@ -125,27 +125,27 @@
     top: 85px;
 }
 
-.g_tva_slider_card .info > img.prev[aria-disabled='true'],
-.g_tva_slider_card .info > img.next[aria-disabled='true'] {
+.g_tva_slider_card .slider_container > img.prev[aria-disabled='true'],
+.g_tva_slider_card .slider_container > img.next[aria-disabled='true'] {
    display: none;
 }
 
-.g_tva_slider_card .info > img.prev {
+.g_tva_slider_card .slider_container > img.prev {
     left: 30px;
 }
 
-.g_tva_slider_card .info > img.next {
+.g_tva_slider_card .slider_container > img.next {
     right: 30px;
 }
 
-.g_tva_slider_card .info .owl-stage-outer {
+.g_tva_slider_card .slider_container .owl-stage-outer {
     width: 100%;
     position: relative;
     overflow: hidden;
 }
 
-.g_tva_slider_card .info .owl-stage-outer::before,
-.g_tva_slider_card .info .owl-stage-outer::after {
+.g_tva_slider_card .slider_container .owl-stage-outer::before,
+.g_tva_slider_card .slider_container .owl-stage-outer::after {
     content: '';
     box-shadow: 0 0 5px 10px var(--color-tva-gray-d);
     background: var(--color-tva-gray-d);
@@ -157,26 +157,26 @@
     z-index: 1;
 }
 
-.g_tva_slider_card .info .owl-stage-outer::before {
+.g_tva_slider_card .slider_container .owl-stage-outer::before {
     left: -10px;
 }
 
-.g_tva_slider_card .info .owl-stage-outer::after {
+.g_tva_slider_card .slider_container .owl-stage-outer::after {
     right: -10px;
 }
 
-.g_tva_slider_card .info .owl-stage {
+.g_tva_slider_card .slider_container .owl-stage {
     display: flex;
 }
 
-.g_tva_slider_card .info .owl-dots {
+.g_tva_slider_card .slider_container .owl-dots {
     cursor: pointer;
     height: 8px;
     margin: 25px 0 0 0;
     text-align: center;
 }
 
-.g_tva_slider_card .info .owl-dots .owl-dot {
+.g_tva_slider_card .slider_container .owl-dots .owl-dot {
     border-radius: 50%;
     background: var(--color-tva-gray-l);
     width: 8px;
@@ -184,15 +184,15 @@
     vertical-align: top;
 }
 
-.g_tva_slider_card .info .owl-dots .owl-dot:not(:last-child) {
+.g_tva_slider_card .slider_container .owl-dots .owl-dot:not(:last-child) {
     margin-right: 6px;
 }
 
-.g_tva_slider_card .info .owl-dots .owl-dot.active {
+.g_tva_slider_card .slider_container .owl-dots .owl-dot.active {
     background: var(--color-tva-gray-l2);
 }
 
-.g_tva_slider_card .info .owl-nav {
+.g_tva_slider_card .slider_container .owl-nav {
     width: 100%;
     display: flex;
     align-items: center;
@@ -204,20 +204,20 @@
     box-sizing: border-box;
 }
 
-.g_tva_slider_card .info .owl-nav button {
+.g_tva_slider_card .slider_container .owl-nav button {
     cursor: pointer;
     background: none;
 }
 
-.g_tva_slider_card .info .owl-nav button.owl-next {
+.g_tva_slider_card .slider_container .owl-nav button.owl-next {
     margin-left: auto;
 }
 
-.g_tva_slider_card .info .owl-nav button.disabled {
+.g_tva_slider_card .slider_container .owl-nav button.disabled {
     display: none;
 }
 
-.g_tva_slider_card .info .owl-nav button img {
+.g_tva_slider_card .slider_container .owl-nav button img {
     width: 35px;
     height: 40px;
 }
@@ -239,36 +239,36 @@
         font-size: 18px;
     }
 
-    .g_tva_slider_card .info {
+    .g_tva_slider_card .slider_container {
         border-radius: 0;
         background: none;
         padding: 0;
         font-size: 16px;
     }
 
-    .g_tva_slider_card .info h2.g_tva_title {
+    .g_tva_slider_card .slider_container h2.g_tva_title {
         margin: 0 0 25px 0;
         font-size: 16px;
     }
 
-    .g_tva_slider_card .info_slider .item {
-        border-radius: var(--border-radius-m);
+    .g_tva_slider_card .slider_stage .item {
+        border-radius: var(--g-tva-border-radius-m);
         background: var(--color-tva-gray-d);
         padding: 30px 15px 35px;
     }
 
-    .g_tva_slider_card .info .owl-stage {
+    .g_tva_slider_card .slider_container .owl-stage {
         position: relative;
         left: -20px;
     }
 
-    .g_tva_slider_card .info .owl-stage-outer::before,
-    .g_tva_slider_card .info .owl-stage-outer::after {
+    .g_tva_slider_card .slider_container .owl-stage-outer::before,
+    .g_tva_slider_card .slider_container .owl-stage-outer::after {
         content: none;
     }
 
-    .g_tva_slider_card .info .owl-dots,
-    .g_tva_slider_card .info .owl-nav {
+    .g_tva_slider_card .slider_container .owl-dots,
+    .g_tva_slider_card .slider_container .owl-nav {
         display: none;
     }
 }

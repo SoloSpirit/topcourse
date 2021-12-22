@@ -16,6 +16,7 @@
     <script src="js/common.js"></script>
     <script src="js/lesson.js"></script>
     <script src="js/sliderCard.js"></script>
+    <script src="js/accordion.js"></script>
     <title>Lesson</title>
 </head>
 <body>
@@ -47,7 +48,7 @@
                 </li>
                 <li class="profile">
                     <img src="img/header/avatar.svg" alt="avatar">
-                    <span class="chevron"></span>
+                    <span class="g_tva_chevron"></span>
                 </li>
             </ul>
         </div>
@@ -83,9 +84,6 @@
                     <div class="msg_user_variant" data-action="select_variant" data-variant="2">
                         Хочу посмотреть все компоненты.
                     </div>
-                    <div class="msg_user_variant" data-action="select_variant" data-variant="3">
-                        Хочу посмотреть маркированные и нумерованные списки.
-                    </div>
 
                     <div class="msg_tv g_tva_hidden" data-variant="1">
                         <img src="img/avatar_tv.png" alt="avatar_tv">
@@ -98,13 +96,6 @@
                         </div>
                     </div>
                     <div class="msg_tv g_tva_hidden" data-variant="2">
-                        <img src="img/avatar_tv.png" alt="avatar_tv">
-                        <div>
-                            <p class="name">Топвизор</p>
-                            <p>Нажми на кнопку - получишь результат ;)</p>
-                        </div>
-                    </div>
-                    <div class="msg_tv g_tva_hidden" data-variant="3">
                         <img src="img/avatar_tv.png" alt="avatar_tv">
                         <div>
                             <p class="name">Топвизор</p>
@@ -149,9 +140,8 @@
 
                     <div class="g_tva_slider_card g_tva_slider_card-violet">
                         <h2 class="g_tva_title">Правила SEO</h2>
-                        <div class="info">
-
-                            <div class="info_slider">
+                        <div class="slider_container">
+                            <div class="slider_stage">
                                 <div class="item">
                                     <h2 class="g_tva_title">1. Будь клевым SEOшником</h2>
                                     <p>
@@ -214,6 +204,27 @@
                         читателей, чтобы каждая соответствовала целям и задачам именно тех людей, к которым мы
                         обращаемся.
                     </p>
+
+                    <div class="g_tva_accordion g_tva_accordion-gray">
+                        <div class="title">
+                            <img src="img/icons/icon_arrow_down.svg" alt="arrow_down">
+                            <img src="img/icons/icon_arrow_up.svg" alt="arrow_up">
+                            <h4 class="g_tva_title">Секретная схема чего-то там</h4>
+                        </div>
+                        <div class="content">
+                            Читай секреты успеха прямо тут
+                        </div>
+                    </div>
+
+                    <p>
+                        Если презентация ориентирована сразу на две, а то и на три аудитории, то нам намного сложнее.
+                        Нужно решать задачи и одних, и других, и третьих. И часть людей будет скучать, пока мы не
+                        доберёмся конкретно до их задач.
+                    </p>
+                </section>
+
+                <section class="g_tva_hidden">
+                    <button class="g_tva_btn" data-action="start_test">Протестировать свои знания!</button>
                 </section>
             </main>
         </div>

@@ -3,7 +3,7 @@
 }
 
 .page_lesson .lesson_img {
-    border: var(--border-radius);
+    border: var(--g-tva-border-radius);
     max-height: 400px;
     margin: 0 0 40px;
     overflow: hidden;
@@ -51,7 +51,7 @@
 .page_lesson .tva_chat .msg_user_variant {
     cursor: pointer;
     border: 2px solid var(--color-tva-blue-l);
-    border-radius: var(--border-radius);
+    border-radius: var(--g-tva-border-radius);
     background: var(--color-tva-gray-d);
     width: calc(100% - 65px);
     padding: 20px;
@@ -80,6 +80,10 @@
     width: calc(100% - 65px);
     max-width: 250px;
     margin: 40px 0 0 auto;
+}
+
+.page_lesson [data-action="start_test"]{
+    margin: 55px 0 0 auto;
 }
 
 @media only screen and (max-width: 1200px) {

@@ -1,6 +1,6 @@
 .g_tva_lesson_card {
     border: 1px solid var(--color-tva-gray-l);
-    border-radius: var(--border-radius);
+    border-radius: var(--g-tva-border-radius);
     background: var(--color-tva-gray-d);
     padding: 20px 18px;
     margin: 0 0 20px;
@@ -40,7 +40,7 @@
 }
 
 .g_tva_lesson_card .lesson_img {
-    border-radius: var(--border-radius-s);
+    border-radius: var(--g-tva-border-radius-s);
     background-color: rgba(40, 107, 234, 0.4);
     background-size: cover;
     background-repeat: no-repeat;

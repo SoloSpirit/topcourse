@@ -81,7 +81,7 @@ header .menu {
 
 header .menu .item {
     cursor: pointer;
-    border-radius: var(--border-radius);
+    border-radius: var(--g-tva-border-radius);
     width: 32px;
     height: 32px;
     margin: 0 0 0 19px;
@@ -97,7 +97,7 @@ header .menu .item:hover {
 
 header .menu .profile {
     cursor: pointer;
-    border-radius: var(--border-radius);
+    border-radius: var(--g-tva-border-radius);
     padding: 2px;
     margin: 0 0 0 22px;
     display: flex;
@@ -114,14 +114,6 @@ header .menu .profile img {
     width: 32px;
 }
 
-header .menu .profile .chevron {
-    background: var(--color-tva-gray);
-    width: 10px;
-    height: 5px;
-    margin: 0 0 0 5px;
-    clip-path: polygon(0 0, 50% 100%, 100% 0);
-}
-
 header .menu .profile:hover .chevron {
     background: var(--color-tva-gray-l);
 }
@@ -136,5 +128,6 @@ article .wrapper {
 }
 
 main {
+    width: 100%;
     max-width: 700px;
 }

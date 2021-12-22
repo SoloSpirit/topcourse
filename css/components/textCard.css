@@ -1,5 +1,5 @@
 .g_tva_text_card {
-    border-radius: var(--border-radius);
+    border-radius: var(--g-tva-border-radius);
     padding: 24px;
     margin: 32px 0;
 }

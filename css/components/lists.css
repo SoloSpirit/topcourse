@@ -40,7 +40,7 @@ ol.g_tva_list {
 }
 
 .g_tva_list-minus > li::before {
-    border-radius: var(--border-radius-s);
+    border-radius: var(--g-tva-border-radius-s);
     background: var(--color-tva-parts-red);
     width: 18px;
     height: 4px;
@@ -62,7 +62,7 @@ ol.g_tva_list {
 
 .g_tva_list-num > li::before {
     content: counter(ol-counter);
-    border-radius: var(--border-radius-xs);
+    border-radius: var(--g-tva-border-radius-xs);
     background: var(--color-tva-gray-l);
     width: 24px;
     height: 24px;

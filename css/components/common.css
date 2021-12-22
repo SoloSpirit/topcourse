@@ -1,11 +1,11 @@
 :root {
-    --border-radius: 8px;
-    --border-radius-l: 12px;
-    --border-radius-m: 6px;
-    --border-radius-s: 4px;
-    --border-radius-xs: 2px;
-    --transition: .1s;
-    --transition-l: .2s;
+    --g-tva-border-radius: 8px;
+    --g-tva-border-radius-l: 12px;
+    --g-tva-border-radius-m: 6px;
+    --g-tva-border-radius-s: 4px;
+    --g-tva-border-radius-xs: 2px;
+    --g-tva-transition: .1s;
+    --g-tva-transition-l: .2s;
 }
 
 .g_tva_flex {
@@ -40,6 +40,16 @@
     flex-wrap: wrap;
 }
 
+.g_tva_chevron {
+    background: var(--color-tva-gray);
+    width: 10px;
+    height: 5px;
+    margin: 0 0 0 5px;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .g_tva_title {
     margin: 12px 0;
     font-family: 'Montserrat', sans-serif;
@@ -70,7 +80,7 @@ h5.g_tva_title {
 }
 
 .g_tva_framed {
-    border-radius: var(--border-radius);
+    border-radius: var(--g-tva-border-radius);
     background: var(--color-tva-gray-d);
     height: 36px;
     padding: 0 18px;
@@ -82,7 +92,7 @@ h5.g_tva_title {
 
 .g_tva_btn {
     cursor: pointer;
-    border-radius: var(--border-radius-s);
+    border-radius: var(--g-tva-border-radius-s);
     background: var(--color-tva-blue);
     height: 46px;
     padding: 0 24px;
@@ -101,7 +111,7 @@ h5.g_tva_title {
 }
 
 .g_tva_btn-dark {
-    border-radius: var(--border-radius);
+    border-radius: var(--g-tva-border-radius);
     background: var(--color-tva-gray);
     height: 32px;
     padding: 0 8px;
