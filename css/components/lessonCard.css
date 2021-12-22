@@ -1,4 +1,4 @@
-.g_tva_lesson_card{
+.g_tva_lesson_card {
     border: 1px solid var(--color-tva-gray-l);
     border-radius: var(--border-radius);
     background: var(--color-tva-gray-d);
@@ -9,11 +9,11 @@
     position: relative;
 }
 
-.g_tva_lesson_card:last-child{
+.g_tva_lesson_card:last-child {
     margin-bottom: 0;
 }
 
-.g_tva_lesson_card::before{
+.g_tva_lesson_card::before {
     content: '';
     border: 2px solid var(--color-tva-gray-l2);
     border-radius: 50%;
@@ -27,11 +27,11 @@
 }
 
 .g_tva_lesson_card-finished::before,
-.g_tva_lesson_card-in_progress::before{
+.g_tva_lesson_card-in_progress::before {
     border-color: var(--color-tva-blue-l);
 }
 
-.g_tva_lesson_card-finished::before{
+.g_tva_lesson_card-finished::before {
     background-color: var(--color-tva-blue-l);
     background-image: url(../../img/icons/icon_check.svg);
     background-size: 12px;
@@ -39,7 +39,7 @@
     background-position: center;
 }
 
-.g_tva_lesson_card .lesson_img{
+.g_tva_lesson_card .lesson_img {
     border-radius: var(--border-radius-s);
     background-color: rgba(40, 107, 234, 0.4);
     background-size: cover;
@@ -51,58 +51,58 @@
     overflow: hidden;
 }
 
-.g_tva_lesson_card .lesson_info{
+.g_tva_lesson_card .lesson_info {
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.g_tva_lesson_card .lesson_info .g_tva_title{
+.g_tva_lesson_card .lesson_info .g_tva_title {
     width: 100%;
     margin: 0 0 12px;
 }
 
-.g_tva_lesson_card .lesson_info .g_tva_title a:hover{
+.g_tva_lesson_card .lesson_info .g_tva_title a:hover {
     text-decoration: underline;
 }
 
-.g_tva_lesson_card span img{
+.g_tva_lesson_card span img {
     margin-bottom: 4px;
     vertical-align: middle;
 }
 
-.g_tva_lesson_card-finished .result{
+.g_tva_lesson_card-finished .result {
     color: var(--color-tva-parts-green);
 }
 
-.g_tva_lesson_card-not_passed .result{
+.g_tva_lesson_card-not_passed .result {
     color: var(--color-tva-parts-red);
 }
 
-.g_tva_lesson_card a.g_tva_btn{
+.g_tva_lesson_card a.g_tva_btn {
     margin: 0 0 0 auto;
 }
 
 /* Adaptive */
 @media only screen and (max-width: 900px) {
-    .g_tva_lesson_card{
+    .g_tva_lesson_card {
         margin-bottom: 8px;
     }
 
-    .g_tva_lesson_card-in_progress{
+    .g_tva_lesson_card-in_progress {
         border-color: var(--color-tva-blue);
     }
 
-    .g_tva_lesson_card::before{
+    .g_tva_lesson_card::before {
         display: none;
     }
 
-    .g_tva_lesson_card .lesson_img{
+    .g_tva_lesson_card .lesson_img {
         display: none;
     }
 
-    .g_tva_lesson_card a.g_tva_btn{
+    .g_tva_lesson_card a.g_tva_btn {
         display: none;
     }
 }

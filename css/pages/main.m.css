@@ -1,18 +1,18 @@
 @media only screen and (max-width: 900px) {
-    .page_main main{
+    .page_main main {
         max-width: 100%;
         margin-right: 0;
     }
 
-    .page_main .info_main{
+    .page_main .info_main {
         padding: 12px;
     }
 
-    .page_main .info_main .g_tva_title{
+    .page_main .info_main .g_tva_title {
         margin: 12px 0 18px;
     }
 
-    .page_main aside{
+    .page_main aside {
         width: 100%;
         margin: 32px 0 0;
     }

@@ -1,21 +1,21 @@
 @media only screen and (max-width: 900px) {
-    body{
+    body {
         font-size: 16px;
     }
 
-    .wrapper{
+    .wrapper {
         padding: 0 12px;
     }
 
-    header .menu{
+    header .menu {
         display: none;
     }
 
-    article{
+    article {
         padding: 25px 0;
     }
 
-    article .wrapper{
+    article .wrapper {
         flex-direction: column;
     }
 }

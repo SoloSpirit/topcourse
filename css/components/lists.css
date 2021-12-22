@@ -1,5 +1,6 @@
-.g_tva_list{
+.g_tva_list {
     padding: 0;
+    margin: 24px 0 32px;
     list-style: none;
 }
 
@@ -7,21 +8,21 @@ ol.g_tva_list {
     counter-reset: ol-counter;
 }
 
-.g_tva_list > li{
+.g_tva_list > li {
     padding: 0 0 0 35px;
     position: relative;
 }
 
-.g_tva_list > li:not(:last-child){
+.g_tva_list > li:not(:last-child) {
     margin-bottom: 25px;
 }
 
-.g_tva_list > li::before{
+.g_tva_list > li::before {
     content: '';
     position: absolute;
 }
 
-.g_tva_list-bullet > li::before{
+.g_tva_list-bullet > li::before {
     border-radius: 50%;
     background: var(--color-tva-blue-l);
     width: 12px;
@@ -30,7 +31,7 @@ ol.g_tva_list {
     left: 6px;
 }
 
-.g_tva_list-plus > li::before{
+.g_tva_list-plus > li::before {
     background: url(../../img/icons/icon_bullet-plus.svg) no-repeat center;
     width: 18px;
     height: 18px;
@@ -38,7 +39,7 @@ ol.g_tva_list {
     left: 3px;
 }
 
-.g_tva_list-minus > li::before{
+.g_tva_list-minus > li::before {
     border-radius: var(--border-radius-s);
     background: var(--color-tva-parts-red);
     width: 18px;
@@ -47,7 +48,7 @@ ol.g_tva_list {
     left: 3px;
 }
 
-.g_tva_list-emoji > li::before{
+.g_tva_list-emoji > li::before {
     background: url(../../img/emoji/emoji_point-right.png) no-repeat center;
     width: 18px;
     height: 18px;
@@ -59,7 +60,7 @@ ol.g_tva_list {
     counter-increment: ol-counter;
 }
 
-.g_tva_list-num > li::before{
+.g_tva_list-num > li::before {
     content: counter(ol-counter);
     border-radius: var(--border-radius-xs);
     background: var(--color-tva-gray-l);
@@ -73,7 +74,7 @@ ol.g_tva_list {
 
 
 @media only screen and (max-width: 900px) {
-    .g_tva_list > li:not(:last-child){
+    .g_tva_list > li:not(:last-child) {
         margin-bottom: 12px;
     }
 }

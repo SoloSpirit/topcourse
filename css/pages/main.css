@@ -1,12 +1,12 @@
-.page_main{
+.page_main {
     justify-content: space-between;
 }
 
-.page_main main{
+.page_main main {
     margin: 0 40px 0 0;
 }
 
-.page_main .info_main{
+.page_main .info_main {
     border-radius: var(--border-radius);
     background: var(--color-tva-pink);
     padding: 24px;
@@ -14,16 +14,16 @@
     font-size: 22px;
 }
 
-.page_main .info_main .g_tva_title{
+.page_main .info_main .g_tva_title {
     margin: 16px 0 38px;
 }
 
-.page_main .info_main .g_tva_btn{
+.page_main .info_main .g_tva_btn {
     width: 100%;
     max-width: 376px;
 }
 
-.page_main .info_telegram{
+.page_main .info_telegram {
     border: 1px solid var(--color-tva-gray-l);
     border-radius: var(--border-radius);
     padding: 18px 16px;
@@ -32,23 +32,23 @@
     position: relative;
 }
 
-.page_main .info_telegram .g_tva_title{
+.page_main .info_telegram .g_tva_title {
     margin: 0 0 16px;
 }
 
-.page_main .info_telegram p{
+.page_main .info_telegram p {
     margin: 0;
 }
 
-.page_main .info_telegram a{
+.page_main .info_telegram a {
     text-decoration: underline;
 }
 
-.page_main .info_telegram a:hover{
+.page_main .info_telegram a:hover {
     color: var(--color-tva-blue-l);
 }
 
-.page_main .info_telegram img{
+.page_main .info_telegram img {
     width: 36px;
     height: 36px;
     position: absolute;
@@ -56,25 +56,25 @@
     right: 16px;
 }
 
-.page_main .course_structure{
+.page_main .course_structure {
     margin: 43px 0 0;
 }
 
-.page_main aside{
+.page_main aside {
     width: calc(100% - 700px - 40px);
     min-width: 300px;
 }
 
-.page_main aside > .g_tva_title{
+.page_main aside > .g_tva_title {
     margin-bottom: 20px;
 }
 
-.page_main aside img{
+.page_main aside img {
     width: 36px;
     height: 36px;
 }
 
-.page_main aside .progress{
+.page_main aside .progress {
     border-radius: 13px;
     background: var(--color-tva-gray);
     height: 16px;
@@ -83,7 +83,7 @@
     flex-grow: 1;
 }
 
-.page_main aside .progress .fill{
+.page_main aside .progress .fill {
     border-radius: 13px;
     background: var(--color-tva-blue-l);
     width: 15%;
@@ -91,16 +91,16 @@
     display: block;
 }
 
-.page_main aside .counters{
+.page_main aside .counters {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
 }
 
-.page_main aside .counters > span{
+.page_main aside .counters > span {
     margin: 0 16px 0 0;
 }
 
-.page_main aside .counters .value{
+.page_main aside .counters .value {
     font-size: 22px;
     font-weight: 700;
 }
