@@ -128,17 +128,29 @@ const testData = {
         },
     ]
 }
-
 const tvaSmallTest = {};
 let correctAnswers = 0;
 
+const drawTitle = title => `<h2 class="g_tva_title">${title}</h2>`;
+const drawRadio = (id, text) =>
+    `<div class="option" data-option-id="${id}">
+        <input type="radio" value="${id}" name="option" required/>
+        ${text}
+    </div>`;
+const drawCheckbox = (id, text) =>
+    `<div class="option" data-option-id="${id}">
+        <input type="checkbox" value="${id}"/>
+        ${text}
+    </div>`;
+const drawHelpText = (isAnswer, text) => `<p class="helpText ${isAnswer ? 'green' : 'red'}">${text}</p>`;
+
 document.addEventListener('DOMContentLoaded', () => {
     tvaSmallTest.wrapper = document.querySelector('.g_tva_small_test');
-    tvaSmallTest.testWrapper = tvaSmallTest.wrapper.querySelector('.test');
-    tvaSmallTest.resultsWrapper = tvaSmallTest.wrapper.querySelector('.test_results');
+    tvaSmallTest.formWrapper = tvaSmallTest.wrapper.querySelector('.form_wrapper');
+    tvaSmallTest.resultWrapper = tvaSmallTest.wrapper.querySelector('.result_wrapper');
     tvaSmallTest.progressBar = tvaSmallTest.wrapper.querySelector('.progress');
-    tvaSmallTest.form = tvaSmallTest.testWrapper.querySelector('.form');
-    tvaSmallTest.actions = tvaSmallTest.testWrapper.querySelector('.actions');
+    tvaSmallTest.form = tvaSmallTest.formWrapper.querySelector('.form');
+    tvaSmallTest.actions = tvaSmallTest.formWrapper.querySelector('.actions');
     tvaSmallTest.activeQuestion = {};
     tvaSmallTest.step = 1;
 
@@ -153,6 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const optionId = formData.get('option');
         const option = tvaSmallTest.activeQuestion.options[optionId - 1];
         const step = tvaSmallTest.step;
+
+        console.log(formData.getAll('option'));
 
         tvaSmallTest.progressBar.querySelector(`[data-progress-step='${step}']`).classList.remove('blue')
         tvaSmallTest.progressBar.querySelector(`[data-progress-step='${step}']`).classList.add(`${option.isAnswer ? 'green' : 'red'}`);
@@ -177,27 +191,14 @@ handleTvaSmallTestClick = (event) => {
             break;
         case 'restart':
             tvaSmallTest.wrapper.classList.remove('ready_results');
+            tvaSmallTest.resultWrapper.querySelector('.result').classList.remove('green');
+            tvaSmallTest.resultWrapper.querySelector('.result').classList.remove('red');
             restartProgressBar();
             initQuestion(1);
             correctAnswers = 0;
             break;
     }
 };
-
-const showResults = () => {
-    const questionsCount = testData.questions.length;
-    let conclusion = '';
-
-    tvaSmallTest.wrapper.classList.add('ready_results');
-    tvaSmallTest.wrapper.querySelector('.test_title').textContent = testData.title;
-    tvaSmallTest.wrapper.querySelector('.test_counter').textContent = `${correctAnswers} / ${questionsCount}`;
-
-    if (correctAnswers < questionsCount / 2) conclusion = testData.resultConclusions.negative;
-    if (correctAnswers > questionsCount / 2 && correctAnswers !== questionsCount) conclusion = testData.resultConclusions.neutral;
-    if (correctAnswers === questionsCount) conclusion = testData.resultConclusions.positive;
-
-    tvaSmallTest.wrapper.querySelector('.conclusion').textContent = conclusion;
-}
 
 const initQuestion = (questionIndex) => {
     tvaSmallTest.form.innerHTML = '';
@@ -209,15 +210,29 @@ const initQuestion = (questionIndex) => {
 
     if (questionIndex > 1) tvaSmallTest.progressBar.querySelector(`[data-progress-step='${questionIndex - 1}']`).classList.remove('blue');
 
-    tvaSmallTest.form.innerHTML += `<h2 class="g_tva_title">${tvaSmallTest.activeQuestion.title}</h2>`;
+    tvaSmallTest.form.innerHTML += drawTitle(tvaSmallTest.activeQuestion.title);
 
-    tvaSmallTest.activeQuestion.options.forEach(option => {
-        tvaSmallTest.form.innerHTML +=
-            `<div class="option" data-option-id="${option.id}">
-                <input type="radio" value="${option.id}" name="option" required/>
-                ${option.text}
-             </div>`
-    })
+    if (tvaSmallTest.activeQuestion.severalAnswers) {
+        tvaSmallTest.activeQuestion.options.forEach(option => tvaSmallTest.form.innerHTML += drawCheckbox(option.id, option.text));
+    } else
+        tvaSmallTest.activeQuestion.options.forEach(option => tvaSmallTest.form.innerHTML += drawRadio(option.id, option.text));
+}
+
+const showResults = () => {
+    const questionsCount = testData.questions.length;
+    const resultClass = correctAnswers > questionsCount / 2 ? 'green' : 'red';
+    let conclusion = '';
+
+    tvaSmallTest.wrapper.classList.add('ready_results');
+    tvaSmallTest.resultWrapper.querySelector('.test_title').textContent = testData.title;
+    tvaSmallTest.resultWrapper.querySelector('.result_counter').textContent = `${correctAnswers}/${questionsCount}`;
+
+    if (correctAnswers < questionsCount / 2) conclusion = testData.resultConclusions.negative;
+    if (correctAnswers > questionsCount / 2 && correctAnswers !== questionsCount) conclusion = testData.resultConclusions.neutral;
+    if (correctAnswers === questionsCount) conclusion = testData.resultConclusions.positive;
+
+    tvaSmallTest.resultWrapper.querySelector('.conclusion').textContent = conclusion;
+    tvaSmallTest.resultWrapper.querySelector('.result').classList.add(resultClass);
 }
 
 const restartProgressBar = () => {

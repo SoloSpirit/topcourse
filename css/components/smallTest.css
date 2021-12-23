@@ -3,6 +3,14 @@
     border: 1px solid var(--color-tva-gray-l2);
 }
 
+.g_tva_small_test.ready_results .form_wrapper {
+    display: none;
+}
+
+.g_tva_small_test:not(.ready_results) .result_wrapper {
+    display: none;
+}
+
 .g_tva_small_test .progress {
     padding: 35px 28px 0;
     text-align: center;
@@ -33,39 +41,39 @@
     background: var(--color-tva-red);
 }
 
-.g_tva_small_test .test h2.g_tva_title {
+.g_tva_small_test .form_wrapper h2.g_tva_title {
     margin: 32px 0 45px;
 }
 
-.g_tva_small_test .test .form {
+.g_tva_small_test .form_wrapper .form {
     padding: 0 28px;
 }
 
-.g_tva_small_test .test .form .option:not(:last-child) {
+.g_tva_small_test .form_wrapper .form .option:not(:last-child) {
     margin-bottom: 25px;
 }
 
-.g_tva_small_test .test .form .option input {
+.g_tva_small_test .form_wrapper .form .option input {
     width: 20px;
     margin: 0 5px 0 0;
 }
 
-.g_tva_small_test .test .form .option .helpText {
+.g_tva_small_test .form_wrapper .form .option .helpText {
     margin: 5px 0 0 0;
     padding: 0 0 0 30px;
     font-size: 16px;
 }
 
-.g_tva_small_test .test .form .option .helpText.green {
+.g_tva_small_test .form_wrapper .form .option .helpText.green {
     color: var(--color-tva-util-green)
 }
 
-.g_tva_small_test .test .form .option .helpText.red {
+.g_tva_small_test .form_wrapper .form .option .helpText.red {
     color: var(--color-tva-parts-red-l)
 }
 
-.g_tva_small_test .test .actions {
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
+.g_tva_small_test .form_wrapper .actions {
+    border-radius: 0 0 var(--g-tva-border-radius) var(--g-tva-border-radius);
     background: var(--color-tva-gray-d2);
     margin: 45px 0 0 0;
     padding: 18px 28px;
@@ -74,40 +82,92 @@
     justify-content: space-between;
 }
 
-.g_tva_small_test .test .actions button {
-    cursor: pointer;
-    border-radius: var(--border-radius-s);
-    color: var(--color-tva-white);
-    font-size: 18px;
-    font-weight: 500;
-    font-family: 'Roboto', sans-serif;
-}
-
-.g_tva_small_test .test .actions button[data-action="next"] {
+.g_tva_small_test .form_wrapper .actions button[data-action="next"] {
     display: none;
 }
 
-.g_tva_small_test .test .actions.ready_next button[data-action="next"] {
+.g_tva_small_test .form_wrapper .actions.ready_next button[data-action="next"] {
     display: block;
 }
 
-.g_tva_small_test .test .actions.ready_next button:first-child {
+.g_tva_small_test .form_wrapper .actions.ready_next button:first-child {
     display: none;
 }
 
-.g_tva_small_test .test .actions button:not(:last-child) {
-    background: var(--color-tva-blue);
+.g_tva_small_test .form_wrapper .actions button:not([data-action="restart"]) {
     padding: 12px 92px;
 }
 
-.g_tva_small_test .test .actions button:last-child {
-    border: 1px solid var(--color-tva-gray-l);
-    background: none;
+.g_tva_small_test .form_wrapper .actions button[data-action="restart"] {
     padding: 12px 28px;
 }
 
-.g_tva_small_test .test .actions button:last-child img {
+.g_tva_small_test .form_wrapper .actions button:last-child img {
     width: 24px;
     height: 24px;
     vertical-align: bottom;
+}
+
+.g_tva_small_test .result_wrapper {
+    padding: 0 16px;
+    text-align: center;
+}
+
+.g_tva_small_test .result_wrapper h4.g_tva_title {
+    margin: 45px 0 0;
+}
+
+.g_tva_small_test .result_wrapper h1.g_tva_title {
+    margin: 20px 0 25px;
+}
+
+.g_tva_small_test .result_wrapper p {
+    margin: 0;
+}
+
+.g_tva_small_test .result_wrapper p.conclusion {
+    margin-top: 12px;
+}
+
+.g_tva_small_test .result_wrapper .result_icon {
+    vertical-align: middle;
+}
+
+.g_tva_small_test .result_wrapper .result img {
+    display: none;
+}
+
+.g_tva_small_test .result_wrapper .result.green img:first-child {
+    display: inline-block;
+}
+
+.g_tva_small_test .result_wrapper .result.red img:last-child {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.g_tva_small_test .result_wrapper .result.green .result_counter {
+    color: var(--color-tva-parts-green);
+}
+
+.g_tva_small_test .result_wrapper .result.red .result_counter {
+    color: var(--color-tva-parts-red)
+}
+
+.g_tva_small_test .result_wrapper .actions {
+    margin: 55px 0 45px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.g_tva_small_test .result_wrapper .actions button {
+    padding: 12px 0;
+    max-width: 280px;
+    width: 100%;
+}
+
+.g_tva_small_test .result_wrapper .actions button:not(:last-child) {
+    margin-bottom: 15px;
 }

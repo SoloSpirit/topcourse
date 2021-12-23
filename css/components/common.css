@@ -133,6 +133,14 @@ h5.g_tva_title {
     background: var(--color-tva-gray-d);
 }
 
+.g_tva_btn-gray {
+    background: var(--color-tva-gray-l);
+}
+
+.g_tva_btn-gray:hover {
+    background: var(--color-tva-gray-l2);
+}
+
 .g_tva_btn-bordered .icon {
     margin: 0 10px 0 4px;
 }
