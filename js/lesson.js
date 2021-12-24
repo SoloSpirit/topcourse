@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('[data-action="start_test"]').addEventListener('click', handleStartTest);
 });
 
-handleTvaChatClick = (event) => {
+const handleTvaChatClick = (event) => {
     const action = event.target.dataset?.action;
 
     switch (action) {
@@ -22,7 +22,7 @@ handleTvaChatClick = (event) => {
     }
 };
 
-handleVariantSelect = (element) => {
+const handleVariantSelect = (element) => {
     element.classList.add('selected');
 
     selectedVariant = element.dataset.variant * 1;
@@ -34,7 +34,7 @@ handleVariantSelect = (element) => {
     document.querySelector('[data-action="go_next"]').classList.remove(HIDDEN_STATE);
 }
 
-handleGoNext = (button) => {
+const handleGoNext = (button) => {
     switch (selectedVariant) {
         case 1:
             button.remove();
@@ -52,7 +52,7 @@ handleGoNext = (button) => {
     }
 }
 
-handleStartTest = (element) => {
+const handleStartTest = (element) => {
     element.target.classList.add(HIDDEN_STATE);
 
     document.querySelector('.g_tva_small_test').classList.remove(HIDDEN_STATE);
