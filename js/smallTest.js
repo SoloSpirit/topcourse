@@ -14,19 +14,19 @@ const testData = {
                     id: 1,
                     text: 'Если запырка пускает пузыри, то она была отравлена.',
                     helpText: 'Этот ответ не подходит, потому что логика спряталась где-то еще.',
-                    isAnswer: false,
+                    isCorrect: false,
                 },
                 {
                     id: 2,
                     text: 'Если запырку не отравить, то она не будет пускать пузыри.',
                     helpText: 'Этот ответ не подходит, потому что логика спряталась где-то еще.',
-                    isAnswer: false,
+                    isCorrect: false,
                 },
                 {
                     id: 3,
                     text: 'Если запырка не пускает пузыри, то она не отравлена.',
                     helpText: 'Этот ответ был правильным!',
-                    isAnswer: true,
+                    isCorrect: true,
                 },
             ]
         },
@@ -38,19 +38,19 @@ const testData = {
                     id: 1,
                     text: 'Не всякий шакал может похвастаться здоровой мухропендией.',
                     helpText: 'Этот ответ был правильным!',
-                    isAnswer: true,
+                    isCorrect: true,
                 },
                 {
                     id: 2,
                     text: 'Не всякий шакал может похвастаться больной мухропендией.',
                     helpText: 'Этот ответ не подходит, потому что логика спряталась где-то еще.',
-                    isAnswer: false,
+                    isCorrect: false,
                 },
                 {
                     id: 3,
                     text: 'Существуют шакалы со здоровой мухропендией.',
                     helpText: 'Этот ответ не подходит, потому что логика спряталась где-то еще.',
-                    isAnswer: false,
+                    isCorrect: false,
                 },
             ]
         },
@@ -62,19 +62,19 @@ const testData = {
                     id: 1,
                     text: 'На самом деле бздыш болотный образован и тактичен.',
                     helpText: 'Этот ответ не подходит, потому что логика спряталась где-то еще.',
-                    isAnswer: false,
+                    isCorrect: false,
                 },
                 {
                     id: 2,
                     text: 'На самом деле бздыш болотный безграмотен, но не нахален.',
                     helpText: 'Этот ответ не подходит, потому что логика спряталась где-то еще.',
-                    isAnswer: false,
+                    isCorrect: false,
                 },
                 {
                     id: 3,
                     text: 'Те журналисты солгали.',
                     helpText: 'Этот ответ был правильным!',
-                    isAnswer: true,
+                    isCorrect: true,
                 },
             ]
         },
@@ -86,63 +86,50 @@ const testData = {
                     id: 1,
                     text: 'В течении последнего часа перпелькой не трясли.',
                     helpText: 'Этот ответ не подходит, потому что логика спряталась где-то еще.',
-                    isAnswer: false,
+                    isCorrect: false,
                 },
                 {
                     id: 2,
                     text: 'В течении последнего часа перпелькой трясли.',
                     helpText: 'Этот ответ был правильным!',
-                    isAnswer: true,
+                    isCorrect: true,
                 },
                 {
                     id: 3,
                     text: 'А нечего было трясти чем попало.',
-                    helpText: 'Этот ответ не подходит, потому что логика спряталась где-то еще.',
-                    isAnswer: true,
+                    helpText: 'Этот ответ был правильным!',
+                    isCorrect: true,
                 },
             ]
         },
         {
             title: 'Огромный бутряк напугал деревенского старосту.',
-            severalAnswers: true,
+            severalAnswers: false,
             options: [
                 {
                     id: 1,
                     text: 'Старосте приснился ночной кошмар.',
                     helpText: 'Этот ответ не подходит, потому что логика спряталась где-то еще.',
-                    isAnswer: false,
+                    isCorrect: false,
                 },
                 {
                     id: 2,
                     text: 'Староста попробовал некачественной выпивки.',
                     helpText: 'Этот ответ не подходит, потому что логика спряталась где-то еще.',
-                    isAnswer: false,
+                    isCorrect: false,
                 },
                 {
                     id: 3,
                     text: 'Староста был напуган.',
                     helpText: 'Этот ответ был правильным!',
-                    isAnswer: true,
+                    isCorrect: true,
                 },
             ]
         },
     ]
 }
 const tvaSmallTest = {};
-let correctAnswers = 0;
-
-const drawTitle = title => `<h2 class="g_tva_title">${title}</h2>`;
-const drawRadio = (id, text) =>
-    `<div class="option" data-option-id="${id}">
-        <input type="radio" value="${id}" name="option" required/>
-        ${text}
-    </div>`;
-const drawCheckbox = (id, text) =>
-    `<div class="option" data-option-id="${id}">
-        <input type="checkbox" value="${id}"/>
-        ${text}
-    </div>`;
-const drawHelpText = (isAnswer, text) => `<p class="helpText ${isAnswer ? 'green' : 'red'}">${text}</p>`;
+let passedQuestions = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
     tvaSmallTest.wrapper = document.querySelector('.g_tva_small_test');
@@ -151,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tvaSmallTest.progressBar = tvaSmallTest.wrapper.querySelector('.progress');
     tvaSmallTest.form = tvaSmallTest.formWrapper.querySelector('.form');
     tvaSmallTest.actions = tvaSmallTest.formWrapper.querySelector('.actions');
+    tvaSmallTest.submitButton = tvaSmallTest.actions.querySelector('button[type="submit"]');
     tvaSmallTest.activeQuestion = {};
     tvaSmallTest.step = 1;
 
@@ -160,29 +148,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tvaSmallTest.form.addEventListener('submit', (e) => {
         e.preventDefault();
-
-        const formData = new FormData(e.target);
-        const optionId = formData.get('option');
-        const option = tvaSmallTest.activeQuestion.options[optionId - 1];
-        const step = tvaSmallTest.step;
-
-        console.log(formData.getAll('option'));
-
-        tvaSmallTest.progressBar.querySelector(`[data-progress-step='${step}']`).classList.remove('blue')
-        tvaSmallTest.progressBar.querySelector(`[data-progress-step='${step}']`).classList.add(`${option.isAnswer ? 'green' : 'red'}`);
-        tvaSmallTest.form.querySelector(`[data-option-id='${optionId}']`).innerHTML +=
-            `<p class="helpText ${option.isAnswer ? 'green' : 'red'}">${option.helpText}</p>`;
-
-        if (option.isAnswer) correctAnswers++;
-
-        if (step === testData.questions.length) showResults();
-        else tvaSmallTest.actions.classList.add('ready_next');
+        handleFormSubmit(e);
     });
 
     tvaSmallTest.wrapper.addEventListener('click', handleTvaSmallTestClick);
+    tvaSmallTest.form.addEventListener('change', handleFormChange);
 });
 
-handleTvaSmallTestClick = (event) => {
+const drawTitle = title => `<h2 class="g_tva_title">${title}</h2>`;
+
+const drawRadio = (id, text) =>
+    `<div class="option" data-option-id="${id}">
+        <input type="radio" value="${id}" name="option" required/>
+        ${text}
+    </div>`;
+
+const drawCheckbox = (id, text) =>
+    `<div class="option" data-option-id="${id}">
+        <input type="checkbox" value="${id}" name="option"/>
+        ${text}
+    </div>`;
+
+const drawHelpText = (isCorrect, text) => `<p class="helpText ${isCorrect ? 'green' : 'red'}">${text}</p>`;
+
+const handleTvaSmallTestClick = event => {
     const action = event.target.dataset?.action;
 
     switch (action) {
@@ -193,43 +182,83 @@ handleTvaSmallTestClick = (event) => {
             tvaSmallTest.wrapper.classList.remove('ready_results');
             tvaSmallTest.resultWrapper.querySelector('.result').classList.remove('green');
             tvaSmallTest.resultWrapper.querySelector('.result').classList.remove('red');
+
+            passedQuestions = 0;
+
             restartProgressBar();
             initQuestion(1);
-            correctAnswers = 0;
+
             break;
     }
 };
 
-const initQuestion = (questionIndex) => {
+const handleFormSubmit = event => {
+    const formData = new FormData(event.target);
+    const answerIds = formData.getAll('option');
+    let correctAnswers = 0;
+    const step = tvaSmallTest.step;
+
+    answerIds.forEach(id => {
+        const answer = tvaSmallTest.activeQuestion.options[id - 1];
+
+        tvaSmallTest.form.querySelector(`[data-option-id='${id}']`).innerHTML += drawHelpText(answer.isCorrect, answer.helpText);
+
+        if (answer.isCorrect) correctAnswers++;
+    });
+
+    tvaSmallTest.progressBar.querySelector(`[data-progress-step='${step}']`).classList.remove('blue');
+
+    if (correctAnswers === tvaSmallTest.activeQuestion.correctAnwers &&
+        correctAnswers === answerIds.length) {
+        passedQuestions++;
+        tvaSmallTest.progressBar.querySelector(`[data-progress-step='${step}']`).classList.add('green');
+    } else tvaSmallTest.progressBar.querySelector(`[data-progress-step='${step}']`).classList.add('red');
+
+    if (step === testData.questions.length) showResults();
+    else tvaSmallTest.actions.classList.add('ready_next');
+}
+
+const handleFormChange = () => {
+    const checkedInputs = tvaSmallTest.form.querySelectorAll('input:checked');
+
+    tvaSmallTest.submitButton.disabled = checkedInputs.length <= 0;
+}
+
+const initQuestion = questionId => {
     tvaSmallTest.form.innerHTML = '';
+    tvaSmallTest.progressBar.querySelector(`[data-progress-step='${questionId}']`).classList.add('blue');
     tvaSmallTest.actions.classList.remove('ready_next');
-    tvaSmallTest.activeQuestion = testData.questions[questionIndex - 1];
-    tvaSmallTest.step = questionIndex;
+    tvaSmallTest.submitButton.disabled = true;
 
-    tvaSmallTest.progressBar.querySelector(`[data-progress-step='${questionIndex}']`).classList.add('blue');
+    tvaSmallTest.activeQuestion = testData.questions[questionId - 1];
+    tvaSmallTest.activeQuestion.correctAnwers = 1;
+    tvaSmallTest.step = questionId;
 
-    if (questionIndex > 1) tvaSmallTest.progressBar.querySelector(`[data-progress-step='${questionIndex - 1}']`).classList.remove('blue');
+    if (questionId > 1) tvaSmallTest.progressBar.querySelector(`[data-progress-step='${questionId - 1}']`).classList.remove('blue');
 
     tvaSmallTest.form.innerHTML += drawTitle(tvaSmallTest.activeQuestion.title);
 
     if (tvaSmallTest.activeQuestion.severalAnswers) {
-        tvaSmallTest.activeQuestion.options.forEach(option => tvaSmallTest.form.innerHTML += drawCheckbox(option.id, option.text));
-    } else
-        tvaSmallTest.activeQuestion.options.forEach(option => tvaSmallTest.form.innerHTML += drawRadio(option.id, option.text));
+        tvaSmallTest.activeQuestion.correctAnwers = 0;
+        tvaSmallTest.activeQuestion.options.forEach(option => {
+            tvaSmallTest.form.innerHTML += drawCheckbox(option.id, option.text);
+            if (option.isCorrect) tvaSmallTest.activeQuestion.correctAnwers++;
+        });
+    } else tvaSmallTest.activeQuestion.options.forEach(option => tvaSmallTest.form.innerHTML += drawRadio(option.id, option.text));
 }
 
 const showResults = () => {
     const questionsCount = testData.questions.length;
-    const resultClass = correctAnswers > questionsCount / 2 ? 'green' : 'red';
+    const resultClass = passedQuestions > questionsCount / 2 ? 'green' : 'red';
     let conclusion = '';
 
     tvaSmallTest.wrapper.classList.add('ready_results');
     tvaSmallTest.resultWrapper.querySelector('.test_title').textContent = testData.title;
-    tvaSmallTest.resultWrapper.querySelector('.result_counter').textContent = `${correctAnswers}/${questionsCount}`;
+    tvaSmallTest.resultWrapper.querySelector('.result_counter').textContent = `${passedQuestions}/${questionsCount}`;
 
-    if (correctAnswers < questionsCount / 2) conclusion = testData.resultConclusions.negative;
-    if (correctAnswers > questionsCount / 2 && correctAnswers !== questionsCount) conclusion = testData.resultConclusions.neutral;
-    if (correctAnswers === questionsCount) conclusion = testData.resultConclusions.positive;
+    if (passedQuestions < questionsCount / 2) conclusion = testData.resultConclusions.negative;
+    if (passedQuestions > questionsCount / 2 && passedQuestions !== questionsCount) conclusion = testData.resultConclusions.neutral;
+    if (passedQuestions === questionsCount) conclusion = testData.resultConclusions.positive;
 
     tvaSmallTest.resultWrapper.querySelector('.conclusion').textContent = conclusion;
     tvaSmallTest.resultWrapper.querySelector('.result').classList.add(resultClass);

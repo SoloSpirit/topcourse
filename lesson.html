@@ -13,10 +13,12 @@
     <link rel="stylesheet" href="css/components/accordion.css">
     <link rel="stylesheet" href="css/components/lists.css">
     <link rel="stylesheet" href="css/components/sliderCard.css">
+    <link rel="stylesheet" href="css/components/smallTest.css">
     <script src="js/common.js"></script>
     <script src="js/lesson.js"></script>
     <script src="js/sliderCard.js"></script>
     <script src="js/accordion.js"></script>
+    <script src="js/smallTest.js"></script>
     <title>Lesson</title>
 </head>
 <body>
@@ -225,6 +227,40 @@
 
                 <section class="g_tva_hidden">
                     <button class="g_tva_btn" data-action="start_test">Протестировать свои знания!</button>
+
+                    <div class="g_tva_small_test g_tva_hidden">
+                        <div class="progress"></div>
+                        <div class="form_wrapper">
+                            <form class="form" id="smallTest"></form>
+                            <div class="actions">
+                                <button type="submit" form="smallTest" class="g_tva_btn">Ответить</button>
+                                <button type="button" data-action="next" class="g_tva_btn">Следующий вопрос</button>
+                                <button type="button" data-action="restart" class="g_tva_btn g_tva_btn-bordered">
+                                    <img src="img/icons/icon_undo.svg" alt="restart">
+                                    Начать заново
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="result_wrapper">
+                            <h4 class="g_tva_title">Тест</h4>
+                            <h1 class="test_title g_tva_title"></h1>
+                            <p class="result">Результаты:
+                                <span class="result_icon">
+                                <img src="img/icons/icon_thumb-up.svg" alt="good_result">
+                                <img src="img/icons/icon_heart-broken.svg" alt="bad_result">
+                            </span>
+                                <span class="result_counter"></span>
+                            </p>
+                            <p class="conclusion"></p>
+                            <div class="actions">
+                                <button type="button" data-action="restart" class="g_tva_btn">Повторить тест</button>
+                                <button type="button" data-action="share" class="g_tva_btn g_tva_btn-gray">Поделиться результатом</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="g_tva_btn g_tva_hidden" data-action="continue_education">Продолжить обучение</button>
                 </section>
             </main>
         </div>

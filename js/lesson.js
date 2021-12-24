@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tvaChat.style.minHeight = `${tvaChat.offsetHeight}px`;
 
     tvaChat.addEventListener('click', handleTvaChatClick);
+    document.querySelector('[data-action="start_test"]').addEventListener('click', handleStartTest);
 });
 
 handleTvaChatClick = (event) => {
@@ -49,4 +50,10 @@ handleGoNext = (button) => {
             location.href = `${location.origin}/${PROJECT_PATH}/components.html`;
             break;
     }
+}
+
+handleStartTest = (element) => {
+    element.target.classList.add(HIDDEN_STATE);
+
+    document.querySelector('.g_tva_small_test').classList.remove(HIDDEN_STATE);
 }

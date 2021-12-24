@@ -110,6 +110,11 @@ h5.g_tva_title {
     background: var(--color-tva-blue-l);
 }
 
+.g_tva_btn:disabled {
+    pointer-events: none;
+    filter: grayscale(0.5);
+}
+
 .g_tva_btn-dark {
     border-radius: var(--g-tva-border-radius);
     background: var(--color-tva-gray);

@@ -86,6 +86,10 @@
     margin: 55px 0 0 auto;
 }
 
+.page_lesson .g_tva_small_test {
+    margin: 45px 0 0 0;
+}
+
 @media only screen and (max-width: 1200px) {
     .page_lesson .go_back span {
         display: none;
