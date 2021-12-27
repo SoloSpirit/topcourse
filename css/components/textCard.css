@@ -1,7 +1,12 @@
 .g_tva_text_card {
     border-radius: var(--g-tva-border-radius);
     padding: 24px;
-    margin: 32px 0;
+    margin: 35px 0;
+}
+
+.g_tva_text_card-small {
+    padding: 16px;
+    font-size: 16px;
 }
 
 .g_tva_text_card-bg_blue {
@@ -42,6 +47,14 @@
 
 .g_tva_text_card-border_red {
     border: 3px solid var(--color-tva-red);
+}
+
+.g_tva_text_card-small.g_tva_text_card-border_blue,
+.g_tva_text_card-small.g_tva_text_card-border_green,
+.g_tva_text_card-small.g_tva_text_card-border_violet,
+.g_tva_text_card-small.g_tva_text_card-border_orange,
+.g_tva_text_card-small.g_tva_text_card-border_red {
+    border-width: 1px;
 }
 
 .g_tva_text_card-gradient {

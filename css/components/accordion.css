@@ -108,7 +108,7 @@
 
 @media only screen and (max-width: 900px) {
     .g_tva_accordion {
-        width: 100vw;
+        width: calc(100% + 24px);
         margin-left: -12px;
     }
 
