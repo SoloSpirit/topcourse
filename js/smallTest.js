@@ -155,21 +155,21 @@ document.addEventListener('DOMContentLoaded', () => {
     tvaSmallTest.form.addEventListener('change', handleFormChange);
 });
 
-const drawTitle = title => `<h2 class="g_tva_title">${title}</h2>`;
+const genTitleHtml = title => `<h2 class="g_tva_title">${title}</h2>`;
 
-const drawRadio = (id, text) =>
+const genRadioHtml = (id, text) =>
     `<div class="option" data-option-id="${id}">
         <input type="radio" value="${id}" name="option" required/>
         ${text}
     </div>`;
 
-const drawCheckbox = (id, text) =>
+const genCheckboxHtml = (id, text) =>
     `<div class="option" data-option-id="${id}">
         <input type="checkbox" value="${id}" name="option"/>
         ${text}
     </div>`;
 
-const drawHelpText = (isCorrect, text) => `<p class="helpText ${isCorrect ? 'green' : 'red'}">${text}</p>`;
+const genHelpTextHtml = (isCorrect, text) => `<p class="helpText ${isCorrect ? 'green' : 'red'}">${text}</p>`;
 
 const handleTvaSmallTestClick = event => {
     const action = event.target.dataset?.action;
@@ -201,7 +201,7 @@ const handleFormSubmit = event => {
     answerIds.forEach(id => {
         const answer = tvaSmallTest.activeQuestion.options[id - 1];
 
-        tvaSmallTest.form.querySelector(`[data-option-id='${id}']`).innerHTML += drawHelpText(answer.isCorrect, answer.helpText);
+        tvaSmallTest.form.querySelector(`[data-option-id='${id}']`).innerHTML += genHelpTextHtml(answer.isCorrect, answer.helpText);
 
         if (answer.isCorrect) correctAnswers++;
     });
@@ -220,7 +220,6 @@ const handleFormSubmit = event => {
 
 const handleFormChange = () => {
     const checkedInputs = tvaSmallTest.form.querySelectorAll('input:checked');
-
     tvaSmallTest.submitButton.disabled = checkedInputs.length <= 0;
 }
 
@@ -236,15 +235,15 @@ const initQuestion = questionId => {
 
     if (questionId > 1) tvaSmallTest.progressBar.querySelector(`[data-progress-step='${questionId - 1}']`).classList.remove('blue');
 
-    tvaSmallTest.form.innerHTML += drawTitle(tvaSmallTest.activeQuestion.title);
+    tvaSmallTest.form.innerHTML += genTitleHtml(tvaSmallTest.activeQuestion.title);
 
     if (tvaSmallTest.activeQuestion.severalAnswers) {
         tvaSmallTest.activeQuestion.correctAnwers = 0;
         tvaSmallTest.activeQuestion.options.forEach(option => {
-            tvaSmallTest.form.innerHTML += drawCheckbox(option.id, option.text);
+            tvaSmallTest.form.innerHTML += genCheckboxHtml(option.id, option.text);
             if (option.isCorrect) tvaSmallTest.activeQuestion.correctAnwers++;
         });
-    } else tvaSmallTest.activeQuestion.options.forEach(option => tvaSmallTest.form.innerHTML += drawRadio(option.id, option.text));
+    } else tvaSmallTest.activeQuestion.options.forEach(option => tvaSmallTest.form.innerHTML += genRadioHtml(option.id, option.text));
 }
 
 const showResults = () => {
@@ -266,5 +265,7 @@ const showResults = () => {
 
 const restartProgressBar = () => {
     tvaSmallTest.progressBar.innerHTML = '';
-    for (let i = 1; i < testData.questions.length + 1; i++) tvaSmallTest.progressBar.innerHTML += `<span data-progress-step='${i}'></span>`;
+    for (let i = 1; i < testData.questions.length + 1; i++) {
+        tvaSmallTest.progressBar.innerHTML += `<span data-progress-step='${i}'></span>`;
+    }
 }

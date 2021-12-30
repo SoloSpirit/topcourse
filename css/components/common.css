@@ -112,7 +112,7 @@ h5.g_tva_title {
 
 .g_tva_btn:disabled {
     pointer-events: none;
-    filter: grayscale(0.5);
+    opacity: 0.6;
 }
 
 .g_tva_btn-dark {
@@ -158,31 +158,6 @@ h5.g_tva_title {
 
 .g_tva_hidden {
     display: none;
-}
-
-.g_tva_comment_wrapper {
-    position: relative;
-}
-
-.g_tva_comment {
-    max-width: 180px;
-    font-size: 16px;
-    position: absolute;
-    top: 0;
-    right: -208px;
-    box-sizing: border-box;
-}
-
-.g_tva_comment-text strong {
-    color: var(--color-tva-util-green-l2);
-    font-size: 22px;
-    display: block;
-}
-
-@media only screen and (max-width: 1200px) {
-    .g_tva_comment {
-       display: none;
-    }
 }
 
 @media only screen and (max-width: 900px) {

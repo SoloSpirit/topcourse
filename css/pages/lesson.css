@@ -91,6 +91,37 @@
     margin: 45px 0 0 0;
 }
 
+/* Comments for lesson page.  */
+/* TODO: decide where it must be placed. May be it can be used anywhere in module */
+.g_tva_comment_wrapper {
+    position: relative;
+}
+
+.g_tva_comment_wrapper .g_tva_text_card{
+    margin: 0;
+}
+
+.g_tva_comment {
+    width: 180px;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    right: calc(-180px - 28px);
+    box-sizing: border-box;
+}
+
+.g_tva_comment-text strong {
+    color: var(--color-tva-util-green-l2);
+    font-size: 22px;
+    display: block;
+}
+
+@media only screen and (max-width: 1095px) {
+    .g_tva_comment{
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .page_lesson .go_back span {
         display: none;
@@ -98,46 +129,5 @@
 
     .page_lesson .go_back .icon {
         margin: 0;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    .page_lesson .go_back {
-        margin: 0 0 15px 0;
-    }
-
-    .page_lesson .go_back span {
-        display: inline-block;
-    }
-
-    .page_lesson .go_back .icon {
-        margin: 0 10px 0 0;
-    }
-
-    .page_lesson .lesson_img {
-        border-radius: 0;
-        width: calc(100% + 24px);
-        margin: 0 0 20px -12px;
-    }
-
-    .page_lesson h1.g_tva_title {
-        margin-bottom: 28px;
-    }
-
-    .page_lesson .tva_chat {
-        margin-top: 28px;
-    }
-
-    .page_lesson .tva_chat .msg_tv + .msg_user_variant {
-        margin-top: 25px;
-    }
-
-    .page_lesson .tva_chat .msg_user_variant + .msg_tv {
-        margin-top: 25px;
-    }
-
-    .page_lesson .tva_chat [data-action="go_next"],
-    .page_lesson [data-action="start_test"] {
-        margin-top: 25px;
     }
 }
