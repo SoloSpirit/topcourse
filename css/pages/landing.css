@@ -1,0 +1,36 @@
+main {
+    max-width: 762px;
+}
+
+/* how_it_works */
+.how_it_works .item {
+    width: calc(100% / 3 - 30px + 30px / 3);
+}
+
+.how_it_works .item img {
+    width: 100%;
+}
+
+.how_it_works .item .g_tva_title{
+    margin-top: 24px;
+    font-size: 18px;
+}
+
+/* team */
+.g_tva_person_card {
+    width: calc(40% - 12px);
+}
+
+.g_tva_person_card:nth-child(even) {
+    width: calc(60% - 12px);
+}
+
+.g_tva_person_card.main {
+    width: 100%;
+}
+
+.g_tva_person_card.main img {
+    width: 120px;
+    height: 120px;
+    margin-right: 24px;
+}
