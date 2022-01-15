@@ -110,10 +110,5 @@
 
     .how_it_works .item .g_tva_title {
         margin-top: 0;
-        font-size: 16px;
-    }
-
-    .how_it_works .item .g_tva_title br {
-        display: none;
     }
 }
