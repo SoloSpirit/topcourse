@@ -92,7 +92,6 @@ section p + p {
 
 .basic_knowledge ol li::before {
     width: 46px;
-    margin: 0 18px 0 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 60px;
     font-weight: 700;

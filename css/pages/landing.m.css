@@ -1,0 +1,119 @@
+@media only screen and (max-width: 900px){
+    /* common */
+    body {
+        font-size: 16px;
+    }
+
+    article {
+        padding: 32px 0 52px;
+    }
+
+    main {
+        max-width: 100%;
+    }
+
+    /* figures */
+    .figures {
+        display: none;
+    }
+
+    /* info_main */
+    .info_main {
+        margin: 0 0 42px;
+    }
+
+    .info_main h1.g_tva_title {
+        font-size: 42px;
+    }
+
+    .info_main .g_tva_counters {
+        margin: 10px 0 15px;
+    }
+
+    .info_main .g_tva_btn {
+        border-radius: var(--g-tva-border-radius-s);
+        height: 48px;
+        margin-top: 25px;
+        font-size: 16px;
+    }
+
+    /* basic_knowledge */
+    .basic_knowledge {
+        padding: 0;
+    }
+
+    .basic_knowledge ol {
+        margin-top: 0;
+    }
+
+    .basic_knowledge ol li {
+        padding-left: 54px;
+        margin-bottom: 25px;
+    }
+
+    .basic_knowledge ol li::before {
+        width: 40px;
+        font-size: 50px;
+    }
+
+    /* support */
+    .support img {
+        display: none;
+    }
+
+    /* course_structure */
+    .course_structure {
+        padding: 0 0 10px;
+    }
+
+    /* how_it_works */
+    .how_it_works h2.g_tva_title {
+        margin-bottom: 24px;
+    }
+
+    .how_it_works .item .g_tva_title {
+        font-size: 16px;
+    }
+
+    .how_it_works .item .g_tva_title br {
+        display: none;
+    }
+
+    /* questions */
+    .questions {
+        padding: 0;
+    }
+
+    /* team */
+    .g_tva_person_card,
+    .g_tva_person_card:nth-child(even) {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    /* how_it_works */
+    .how_it_works > .g_tva_flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .how_it_works .item {
+        width: 100%;
+        max-width: 234px;
+        margin-bottom: 20px;
+    }
+
+    .how_it_works .item:last-child {
+        margin-bottom: 0;
+    }
+
+    .how_it_works .item .g_tva_title {
+        margin-top: 0;
+        font-size: 16px;
+    }
+
+    .how_it_works .item .g_tva_title br {
+        display: none;
+    }
+}
