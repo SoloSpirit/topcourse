@@ -7,8 +7,13 @@
 .g_tva_modules_list [data-module] {
     margin: 0 0 46px;
 }
+
 .g_tva_modules_list [data-module].closed {
     margin-bottom: 20px;
+}
+
+.g_tva_modules_list [data-module].closed:last-child {
+    margin-bottom: 0;
 }
 
 .g_tva_modules_list .module_name {

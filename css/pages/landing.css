@@ -1,8 +1,142 @@
+/* common */
+body {
+    font-size: 22px;
+}
+
+article {
+    padding-top: 0;
+    overflow: hidden;
+}
+
+article .wrapper {
+    justify-content: center;
+    position: relative;
+}
+
 main {
     max-width: 762px;
 }
 
+section h2.g_tva_title {
+    margin: 32px 0 24px;
+}
+
+section p {
+    margin: 0;
+}
+
+section p + p {
+    margin: 34px 0 0;
+}
+
+/* figures */
+.figures {
+    position: absolute;
+    top: -200px;
+    left: -237px;
+    z-index: -1;
+}
+
+/* info_main */
+.info_main {
+    margin: 348px 0 120px;
+}
+
+.info_main .g_tva_title {
+    margin: 0;
+}
+
+.info_main h1.g_tva_title {
+    margin-top: 6px;
+    font-size: 72px;
+}
+
+.info_main .g_tva_counters {
+    margin: 24px 0;
+}
+
+.info_main .g_tva_btn {
+    border-radius: var(--g-tva-border-radius);
+    max-width: 338px;
+    height: 68px;
+    margin: 50px auto 0;
+    font-size: 24px;
+}
+
+.info_main .g_tva_btn img {
+    width: 24px;
+    height: 24px;
+    margin: 0 0 0 6px;
+}
+
+/* basic_knowledge */
+.basic_knowledge {
+    padding: 10px 0 40px;
+}
+
+.basic_knowledge ol {
+    list-style-type: none;
+    margin: 46px 0 0;
+    padding: 0;
+}
+
+.basic_knowledge ol li {
+    padding: 0 0 0 64px;
+    margin: 0 0 41px;
+    position: relative;
+}
+
+.basic_knowledge ol li:last-child {
+    margin-bottom: 0;
+}
+
+.basic_knowledge ol li::before {
+    width: 46px;
+    margin: 0 18px 0 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.basic_knowledge ol li:first-child::before {
+    content: '1';
+    color: #FFC328;
+}
+
+.basic_knowledge ol li:nth-child(2)::before {
+    content: '2';
+    color: #14C69C;
+}
+
+.basic_knowledge ol li:nth-child(3)::before {
+    content: '3';
+    color: #FCBCF7;
+}
+
+.basic_knowledge ol li:last-child::before {
+    content: '4';
+    color: #E9EEFE;
+}
+
+/* support */
+.support img {
+    margin: -10px 0 0 22px;
+}
+
+/* course_structure */
+.course_structure {
+    padding: 32px 0 20px;
+}
+
 /* how_it_works */
+.how_it_works h2.g_tva_title {
+    margin-bottom: 54px;
+}
+
 .how_it_works .item {
     width: calc(100% / 3 - 30px + 30px / 3);
 }
@@ -16,9 +150,23 @@ main {
     font-size: 18px;
 }
 
+/* questions */
+.questions {
+    padding: 45px 0 24px;
+}
+
+.questions h3.g_tva_title {
+    margin: 38px 0 16px;
+}
+
 /* team */
+.team h2.g_tva_title {
+    margin-bottom: 46px;
+}
+
 .g_tva_person_card {
     width: calc(40% - 12px);
+    margin: 0 0 28px;
 }
 
 .g_tva_person_card:nth-child(even) {
@@ -27,10 +175,24 @@ main {
 
 .g_tva_person_card.main {
     width: 100%;
+    margin-bottom: 46px;
 }
 
 .g_tva_person_card.main img {
     width: 120px;
     height: 120px;
     margin-right: 24px;
+}
+
+.g_tva_person_card.main img + div {
+    margin-top: 10px;
+}
+
+/* contact_us */
+.contact_us a {
+    color: var(--color-tva-blue);
+}
+
+.contact_us a:hover {
+    text-decoration: underline;
 }

@@ -186,6 +186,20 @@ h5.g_tva_title {
     font-weight: normal;
 }
 
+.g_tva_counters {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.g_tva_counters > span {
+    margin: 0 16px 0 0;
+}
+
+.g_tva_counters .value {
+    font-size: 22px;
+    font-weight: 700;
+}
+
 @media only screen and (max-width: 900px) {
     .g_tva_title {
         font-size: 28px;
