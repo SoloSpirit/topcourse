@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="css/components/modulesList.css">
     <link rel="stylesheet" href="css/components/lessonCard.css">
     <link rel="stylesheet" href="css/components/textCard.css">
+    <link rel="stylesheet" href="css/components/accordion.css">
     <link rel="stylesheet" href="css/pages/landing.css">
     <link rel="stylesheet" href="css/pages/landing.m.css">
     <script src="js/common.js"></script>
+    <script src="js/accordion.js"></script>
     <title>Landing</title>
 </head>
 <body>
@@ -266,45 +268,77 @@
                 <section class="questions">
                     <h2 class="g_tva_title">Ответы на вопросы</h2>
 
-                    <h3 class="g_tva_title">Как устроен курс?</h3>
-                    <p>
-                        В курсе N модулей — N уроков. Каждый следующий урок открывается только тогда, когда вы проходите
-                        предыдущий. Чтобы закрепить знания, в конце уроков есть итоговые тесты. Они ни на что не вляют,
-                        их можно проходить неограниченное количество раз.
-                    </p>
+                    <div class="g_tva_accordion g_tva_accordion-gray">
+                        <div class="title">
+                            <img src="img/icons/icon_arrow_down.svg" alt="arrow_down">
+                            <img src="img/icons/icon_arrow_up.svg" alt="arrow_up">
+                            <h4 class="g_tva_title">Как устроен курс?</h4>
+                        </div>
+                        <div class="content">
+                            <p>
+                                В курсе N модулей — N уроков. Каждый следующий урок открывается только тогда, когда вы проходите
+                                предыдущий. Чтобы закрепить знания, в конце уроков есть итоговые тесты. Они ни на что не вляют,
+                                их можно проходить неограниченное количество раз.
+                            </p>
 
-                    <p>
-                        После того, как вы пройдёте все модули курса, мы предложим вам сдать итоговый тест. Это не
-                        обязательно, но вы не сможете получить сертификат, если откажетесь от тестирования.
-                    </p>
+                            <p>
+                                После того, как вы пройдёте все модули курса, мы предложим вам сдать итоговый тест. Это не
+                                обязательно, но вы не сможете получить сертификат, если откажетесь от тестирования.
+                            </p>
 
-                    <p>
-                        Сертификат смогут получить только те, кто успешно сдаст итоговый тест. Количество попыток не
-                        ограничено.
-                    </p>
+                            <p>
+                                Сертификат смогут получить только те, кто успешно сдаст итоговый тест. Количество попыток не
+                                ограничено.
+                            </p>
+                        </div>
+                    </div>
 
-                    <h3 class="g_tva_title">Сколько стоит курс?</h3>
-                    <p>
-                        Курс полностью бесплатный. Вы можете проходить его в любое время сколько угодно раз.
-                    </p>
+                    <div class="g_tva_accordion g_tva_accordion-gray">
+                        <div class="title">
+                            <img src="img/icons/icon_arrow_down.svg" alt="arrow_down">
+                            <img src="img/icons/icon_arrow_up.svg" alt="arrow_up">
+                            <h4 class="g_tva_title">Сколько стоит курс?</h4>
+                        </div>
+                        <div class="content">
+                            <p>
+                                Курс полностью бесплатный. Вы можете проходить его в любое время сколько угодно раз.
+                            </p>
+                        </div>
+                    </div>
 
-                    <h3 class="g_tva_title">Как получить сертификат?</h3>
-                    <p>
-                        В конце курса мы предложим пройти итоговый тест. Если вы пройдёте его успешно, то сможете
-                        получить сертификат от Топвизора.
-                    </p>
+                    <div class="g_tva_accordion g_tva_accordion-gray">
+                        <div class="title">
+                            <img src="img/icons/icon_arrow_down.svg" alt="arrow_down">
+                            <img src="img/icons/icon_arrow_up.svg" alt="arrow_up">
+                            <h4 class="g_tva_title">Как получить сертификат?</h4>
+                        </div>
+                        <div class="content">
+                            <p>
+                                В конце курса мы предложим пройти итоговый тест. Если вы пройдёте его успешно, то сможете
+                                получить сертификат от Топвизора.
+                            </p>
 
-                    <p>
-                        Сертификат будет сформирован после прохождения теста, дополнительно мы отправим сертификат на
-                        электронную почту, чтобы он не потерялся.
-                    </p>
+                            <p>
+                                Сертификат будет сформирован после прохождения теста, дополнительно мы отправим сертификат на
+                                электронную почту, чтобы он не потерялся.
+                            </p>
+                        </div>
+                    </div>
 
-                    <h3 class="g_tva_title">Кому задавать вопросы?</h3>
-                    <p>
-                        В курсе нет кураторов или наставников, которые отвечали бы на вопросы студентов, но мы всегда
-                        готовы ответить вам в закрытом чате, если у вас появились вопросы. Обязательно вступайте в чат
-                        и пишите нам обо всём — ссылка появится на странице курса после начала обучения.
-                    </p>
+                    <div class="g_tva_accordion g_tva_accordion-gray">
+                        <div class="title">
+                            <img src="img/icons/icon_arrow_down.svg" alt="arrow_down">
+                            <img src="img/icons/icon_arrow_up.svg" alt="arrow_up">
+                            <h4 class="g_tva_title">Кому задавать вопросы?</h4>
+                        </div>
+                        <div class="content">
+                            <p>
+                                В курсе нет кураторов или наставников, которые отвечали бы на вопросы студентов, но мы всегда
+                                готовы ответить вам в закрытом чате, если у вас появились вопросы. Обязательно вступайте в чат
+                                и пишите нам обо всём — ссылка появится на странице курса после начала обучения.
+                            </p>
+                        </div>
+                    </div>
                 </section>
 
                 <section class="team">
