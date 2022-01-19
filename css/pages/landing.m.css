@@ -5,7 +5,7 @@
     }
 
     article {
-        padding: 32px 0 52px;
+        padding: 130px 0 52px;
     }
 
     main {
@@ -14,12 +14,19 @@
 
     /* figures */
     .figures {
-        display: none;
+        width: 100vw;
+        top: -160px;
+        left: 0;
+        opacity: 0.2;
     }
 
     /* info_main */
     .info_main {
         margin: 0 0 42px;
+    }
+
+    .info_main h3.g_tva_title {
+        font-size: 18px;
     }
 
     .info_main h1.g_tva_title {
@@ -28,6 +35,10 @@
 
     .info_main .g_tva_counters {
         margin: 10px 0 15px;
+    }
+
+    .info_main .g_tva_counters .value {
+        font-size: 18px;
     }
 
     .info_main .g_tva_btn {
